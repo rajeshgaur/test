@@ -1,0 +1,251 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Responsive Vertical Dropdown Navigation Menu with HTML & CSS | Tutorial.World.Edu </title>
+
+<link rel = "stylesheet" type = "text/css" href = "css/united.css">
+<style type="text/css">
+.container{
+	width:100%;
+	padding:0;}
+body {
+	font-family:inherit;
+	font-weight:bold;
+	background: url("phimgff.jpg") repeat;
+}
+h1 {
+	font-family: Arial, Verdana;
+	font-size: 24px;
+    text-align:center;
+	color:#fff;
+    margin-top:50px;
+}
+.content > a{
+	font-family: Arial, Verdana;
+	font-weight:bold;
+    	text-align:center;
+	color:#fff;
+	text-decoration: none;
+}
+.content{
+    margin-top:30px;
+    margin-left:420px;
+}
+.content > ul {
+	margin:0px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.content > ul li {
+    background:#555;
+	width:120px;
+	box-sizing: initial;
+	line-height:26px;
+	list-style:none;
+	padding-left:18px;
+	padding-right:10px;
+	border-top:#fff solid;
+	border-bottom:#fff solid;
+	border-width:1px;
+	cursor:pointer;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+	margin-top:3px;
+}
+
+.content > ul li a {
+	color:#FFF;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+.content > ul li:hover {
+	background-color:#a1a1a1;
+	position:relative;
+}
+.content > ul ul {
+	display:none;
+	position:absolute;
+	left:120px;
+	top:5px;
+}
+.content > ul li:hover ul {
+	display:block;
+}
+.content > ul ul li {
+	width:150px;
+	float:left;
+	display:inline;
+	border:none;
+    margin-top:3px;
+}
+ .content > ul ul li:hover {
+	text-decoration:none;
+	border:none;
+}
+ .content > .home {
+    background: #2c64a7 url('http://1.bp.blogspot.com/-dvnFgJtmzeA/UezVJqa7-7I/AAAAAAAAA5E/xirusMIRJcY/s1600/Create+Responsive+Vertical+Dropdown+Navigation+Menu+about.png') no-repeat;
+	color:#FFF;
+	padding-top:5px;
+	padding-left:50px;
+	text-decoration:none;
+	text-transform:uppercase;
+	background-size:75px 100px 80px;
+	height:60px;
+	width :120px;
+	opacity:0.7;
+}
+ .content > .about{
+    background: #2c64a7 url('http://1.bp.blogspot.com/-dvnFgJtmzeA/UezVJqa7-7I/AAAAAAAAA5E/xirusMIRJcY/s1600/Create+Responsive+Vertical+Dropdown+Navigation+Menu+about.png') no-repeat;
+	color:#FFF;
+	padding-top:5px;
+	padding-left:55px;
+	text-decoration:none;
+	text-transform:uppercase;
+	background-size:45px 40px;
+	opacity:0.7;
+}
+ .content > .services{
+    background: #2c64a7 url('http://1.bp.blogspot.com/-dvnFgJtmzeA/UezVJqa7-7I/AAAAAAAAA5E/xirusMIRJcY/s1600/Create+Responsive+Vertical+Dropdown+Navigation+Menu+about.png') no-repeat;
+	color:#FFF;
+	padding-top:5px;
+	padding-left:55px;
+	text-decoration:none;
+	text-transform:uppercase;
+	background-size:45px 40px;
+	opacity:0.7;
+}
+ .content > .contact{
+    background: #2c64a7 url('http://1.bp.blogspot.com/-dvnFgJtmzeA/UezVJqa7-7I/AAAAAAAAA5E/xirusMIRJcY/s1600/Create+Responsive+Vertical+Dropdown+Navigation+Menu+about.png') no-repeat;
+	color:#FFF;
+	padding-top:5px;
+	padding-left:55px;
+	text-decoration:none;
+	text-transform:uppercase;
+	background-size:45px 40px;
+	opacity:0.7;
+}
+ .content > .about1 {
+    background: #0095e6 url('http://2.bp.blogspot.com/-21k0tiY6Q8s/UezVdu6zauI/AAAAAAAAA5c/CV1Niz0qefE/s320/Create+Responsive+Vertical+Dropdown+Navigation+Menu+about+1.png') no-repeat;
+	height:35px;
+	background-size:28px 28px;
+    background-position:5px 5px;
+    padding-top:5px;
+    padding-left:38px;
+}
+ .content > .services1 {
+    background: #e65100 url('http://3.bp.blogspot.com/-GAqHVCBGHTs/UezVi3XcDUI/AAAAAAAAA5k/eFm82CMuEg0/s1600/Create+Responsive+Vertical+Dropdown+Navigation+Menu+services+1.png') no-repeat;
+	height:35px;
+	background-size:24px 24px;
+    background-position:5px 5px;
+    padding-top:5px;
+}
+ .content > .services2 {
+    background: #e65100 url('http://3.bp.blogspot.com/-GAqHVCBGHTs/UezVi3XcDUI/AAAAAAAAA5k/eFm82CMuEg0/s1600/Create+Responsive+Vertical+Dropdown+Navigation+Menu+services+1.png') no-repeat;
+	height:55px;
+	background-size:24px 24px;
+    background-position:5px 13px;
+}
+ .content > .services3 {
+    background: #e65100 url('http://3.bp.blogspot.com/-GAqHVCBGHTs/UezVi3XcDUI/AAAAAAAAA5k/eFm82CMuEg0/s1600/Create+Responsive+Vertical+Dropdown+Navigation+Menu+services+1.png') no-repeat;
+	height:75px;
+	background-size:24px 24px;
+    background-position:5px 28px;
+}
+ .content > .contact1 {
+    background: #ca3b7d url('http://3.bp.blogspot.com/-tDJVGZI4t8M/UezVrO1ISQI/AAAAAAAAA5s/GrsMUjXaSQA/s1600/Create+Responsive+Vertical+Dropdown+Navigation+Menu+contact+1.png') no-repeat;
+	height:35px;
+	background-size:24px 24px;
+    background-position:5px 5px;
+    padding-top:5px;
+}
+</style>
+</head>
+
+		<div class="container" style = "font-family: 'Museo Slab'">	
+
+<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
+		<script src = "js/bootstrap.js"> </script>
+
+		<div class="”container”" style = "font-family: 'Museo Slab'">
+			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
+			<!--- Nav bar -->
+			<div class="navbar navbar-default">
+  			<div class="navbar-header">
+    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      				<span class="icon-bar"></span>
+      				<span class="icon-bar"></span>
+      				<span class="icon-bar"></span>
+    			</button>
+    			<a class="navbar-brand" href="#">Physics-Easily</a>
+  			</div>
+  			<div class="navbar-collapse collapse navbar-responsive-collapse" >
+    			<ul class="nav navbar-nav">
+      				<li class="active"><a href="#">Home</a></li>
+      				<li class="dropdown">
+      				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+      				  <ul class="dropdown-menu">
+      				    <li><a href="#">Action</a></li>
+      				    <li><a href="#">Another action</a></li>
+      				    <li><a href="#">Something else here</a></li>
+      				    <li class="divider"></li>
+      				    <li class="dropdown-header">Dropdown header</li>
+      				    <li><a href="#">Separated link</a></li>
+      				    <li><a href="#">One more separated link</a></li>
+      				  </ul>
+      				</li>
+    			</ul>
+    			<form class="navbar-form navbar-left">
+      				<input type="text" class="form-control col-lg-8" placeholder="Search">
+    			</form>
+    			<ul class="nav navbar-nav navbar-right">
+      				<li><a href="login.html" target="_blank">LOGIN</a></li>
+      				<li><a href="signup.html">Sign Up</a></li>
+    			</ul>
+  			</div>
+			</div>
+
+<h1>Newtonian Mechanics Topics and Subtopics</h1>
+
+<div class="content">
+
+  <ul>
+    <li class="home"><a href="1-D-Kinematics.html">1-D Kinematics</a>
+     <ul>
+
+      <li class="contact1"><a href="Scalars-and-Vectors.html">Scalars and Vectors</a></li>
+      <li class="contact1"><a href="Distance-and-Displacement.html">Distance and Displacement</a></li>
+      <li class="contact1"><a href="Speed-and-Velocity.html">Speed and Velocity</a></li>
+      <li class="contact1"><a href="Acceleration.html">Acceleration</a></li>
+      </ul>
+    </li>
+    <li class="about"><a href="Newtons-Laws-of-Motion.html">NLM</a>
+      <ul>
+      <li class="contact1"><a href="Newtons-Laws-of-Motion.html">First Law</a></li>
+      <li class="contact1"><a href="Newtons-Second-Law.html">Second Law</a></li>
+      <li class="contact1"><a href="Newtons-Third-Law.html">Third Law</a></li>
+      
+      </ul>
+	</li>
+    <li class="services"><a href="vectors.html">Vectors in 2-D</a>
+      <ul>
+      <li class="contact1"><a href="#">Topic1</a></li>
+      <li class="contact1"><a href="#">Topic2</a></li>
+      <li class="contact1"><a href="#">Topic3</a></li>
+      <li class="contact1"><a href="#">Topic4</a></li>
+      </ul>
+    </li>
+    <li class="contact"><a href="#">Chapter4</a>
+      <ul>
+      <li class="contact1"><a href="#">Topic1</a></li>
+      <li class="contact1"><a href="#">Topic2</a></li>
+      <li class="contact1"><a href="#">Topic3</a></li>
+      <li class="contact1"><a href="#">Topic4</a></li>
+      </ul>
+	</li>
+  </ul>
+</div>
+</body>
+</html>
