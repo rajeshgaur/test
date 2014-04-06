@@ -14,13 +14,15 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .intro-header {
-	padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-	padding-bottom: 50px;
-	color: #f8f8f8;
-	background: url(../img/15.jpg) no-repeat center center;
-	background-size: cover;
-	text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #f8f8f8;
+  background: url(../img/gear.jpg) no-repeat ;
+  background-size: 1500px 840px;
+  text-align: center;
+
 }
+
 
 .intro-message {
 	position: relative;
