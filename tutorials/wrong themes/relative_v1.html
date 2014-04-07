@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="578" height="200" style="border: 1px solid black"></canvas>
+    <script>
+      window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
+
+      function drawRectangle(myRectangle, context) {
+        context.beginPath();
+        context.rect(myRectangle1.x, myRectangle1.y, myRectangle1.width, myRectangle1.height);
+        //context.fillStyle = '#8ED6FF';
+        //context.fill();
+		var thumbImg = document.createElement('img');
+		thumbImg.src = '\img\car1';
+        context.lineWidth = myRectangle.borderWidth;
+        context.strokeStyle = 'black';
+        context.stroke();
+		context.rect(myRectangle2.x, myRectangle2.y, myRectangle2.width, myRectangle2.height);
+        context.fillStyle = '#8ED6FF';
+        context.fill();
+		var thumbImg = document.createElement('img');
+		thumbImg.src = '\img\car2';
+        context.lineWidth = myRectangle.borderWidth;
+        context.strokeStyle = 'black';
+        context.stroke();
+
+      }
+	  
+      function animate(myRectangle, canvas, context, startTime) {
+        // update
+        var time = (new Date()).getTime() - startTime;
+
+        var linearSpeed1 = velocity1;
+		var linearSpeed2 = velocity2;
+        // pixels / second
+        var newX1 = linearSpeed1 * time / 1000
+		var newX2 = linearSpeed2 * time / 1000;
+
+        if(newX1 < canvas.width - myRectangle1.width - myRectangle1.borderWidth / 2) {
+          myRectangle1.x = newX1;
+        }
+		if(newX2 < canvas.width - myRectangle2.width - myRectangle2.borderWidth / 2) {
+          myRectangle2.x = newX2;
+        }
+
+        // clear
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        context.drawImage(imageObj, x, y);
+
+        // request new frame
+        requestAnimFrame(function() {
+          animate(myRectangle, canvas, context, startTime);
+        });
+      }
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      var myRectangle1 = {
+        x: 0,
+        y: 75,
+        width: 100,
+        height: 50,
+        borderWidth: 5
+      };
+	  var myRectangle2 = {
+        x: 0,
+        y: 250,
+        width: 100,
+        height: 50,
+        borderWidth: 5
+      };
+
+     /*var imageObj = new Image();
+
+      imageObj.onload = function() {
+        context.drawImage(imageObj, x, y);
+      };
+	  
+      imageObj.src = "img/car1.jpg";*/
+	  // wait one second before starting animation
+      setTimeout(function() {
+        var startTime = (new Date()).getTime();
+        animate(myRectangle, canvas, context, startTime);
+      }, 1000);
+	  
+	  function getvelocity()
+	  {
+	  velocity1=document.getElementById("velocity1").value;
+	  velocity2=document.getElementById("velocity2").value;
+	  console.log(velocity1);
+	  console.log(velocity2);
+	  }
+    </script>
+	<label> Velocity of car1</label>  <input id = "velocity1" name = "velocity" ><br>
+	<label> Velocity of car1</label>  <input id = "velocity2" name = "velocity" ><br>
+	<input type= "button"  value="Go" onclick="getvelocity()" style ="margin-bottom:10px;">
+  </body>
+</html>

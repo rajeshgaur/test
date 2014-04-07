@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {margin:0px;padding:0px;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;width:100%;height:100%;}
 body, table, td, form, input, select, pre {font-family:Arial,Helvetica,sans-serif;color:#000000;}
 
@@ -60,4 +61,68 @@ a:hover {text-decoration:underline;}
 
 .keyNav {font-family:Verdana,Arial,Helvetica;color:#cc0000; font-size:14px;text-decoration:underline;line-height:22pt;}
 .keyNav:visited {color:#660000;}
+=======
+body {margin:0px;padding:0px;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;width:100%;height:100%;}
+body, table, td, form, input, select, pre {font-family:Arial,Helvetica,sans-serif;color:#000000;}
+
+html body, html table, html td, html input, html select {font-family:Arial,Helvetica,sans-serif;}
+h1 {font-family:sans-serif;font-weight:bold;font-size:large;color:#990000;margin-bottom:2px;margin-top:15px;}
+h2, h3, h4, h5, h6 {font-family:sans-serif;font-weight:bold;color:#990000;margin-bottom:2px;margin-top:2px;}
+body, form {margin:0px; padding:0px;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;width:100%;height:100%;}
+
+/* Table Formats */
+table.redBorder {
+	border:1px solid #ff9999;
+	padding:0px;
+}
+td.redBorder {
+	border:1px solid #ff9999;
+	padding:5px;
+	font-family:Verdana,Arial,Helvetica;color:#000000;font-size:12px;line-height: 13pt;
+}
+
+
+/* Modified to make default link behave like featureLnk */
+a {color:#cc0000;text-decoration:underline;}
+a:hover {text-decoration:underline;color:#ff0000;}
+a:visited {color:#990000;text-decoration:underline;}
+a:hover {text-decoration:underline;}
+.bold {font-weight:bold;}
+.boldTitle {font-size:13px; font-weight:bold;}
+.italic {font-style:italic;}
+.light {color:#484848;}
+.small {font-size:10px;}
+
+/* Global Styles */
+.navLink {font-family:Verdana,Arial,Helvetica;color:#cc0000;font-size:13px;text-decoration:underline;}
+.navLink:visited {color:#660000;}
+.navLink:hover {color:#ff0000;}
+
+.glossLink {font-family:Verdana,Arial,Helvetica;color:#cc0000;font-size:16px;text-decoration:underline;}
+.glossLink:visited {color:#660000;}
+.glossLink:hover {color:#ff0000;}
+
+.contentLink {font-family:sans-serif;color:#cc0000;font-size:16px;text-decoration:underline;}
+.contentLink:visited {color:#660000;}
+.contentLink:hover {color:#ff0000;}
+
+.relLink {font-family:Verdana,Arial,Helvetica;color:#cc0000;font-size:12px;text-decoration:underline;}
+.relLink:visited {color:#660000;}
+.relLink:hover {color:#ff0000;}
+.relLinkText {font-family:Verdana,Arial,Helvetica;color:#000000;font-size:12px;line-height: 13pt;}
+
+.relGloss {font-family:Verdana,Arial,Helvetica;color:#000000;font-size:12px;font-weight:bold;}
+
+.liveLink {font-family:Verdana,Arial,Helvetica;color:#cc0000;font-size:12px;text-decoration:underline;}
+.liveLink:visited {color:#660000;}
+.liveLink:hover {color:#ff0000;}
+.liveLinkText {font-family:Verdana,Arial,Helvetica;color:#000000;font-size:12px;}
+
+.quizLink {font-family:Verdana,Arial,Helvetica;color:#006633;font-size:16px;text-decoration:underline;}
+.quizLink:visited {color:#006633;}
+.quizLink:hover {color:#ff0000;}
+
+.keyNav {font-family:Verdana,Arial,Helvetica;color:#cc0000; font-size:14px;text-decoration:underline;line-height:22pt;}
+.keyNav:visited {color:#660000;}
+>>>>>>> 4a66eb13399fd8bd3b2074a65794462e975e612e
 .keyNav:hover {font-weight:bold;color:#ff0000;}
