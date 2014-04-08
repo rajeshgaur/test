@@ -1,6 +1,7 @@
+var topic_num = 0;
 function create_topic() {
     var newelement ;
-    var topic_num = 1;
+    topic_num++;
     var topicname = 'topic_' + topic_num;
     var form = document.getElementById('main_form');
     form.innerHTML += '<br> Topic Name : ';
@@ -8,6 +9,7 @@ function create_topic() {
     console.log("Das");
     newelement = document.createElement("input");
     newelement.setAttribute('type','text');
+    newelement.setAttribute('name',topicname);
    // newelement.setAttribute('type','text');
     //newelement.setAttribut('name', topicname);
     form.appendChild(newelement);

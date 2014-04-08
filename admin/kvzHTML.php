@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-require_once 'Kvz.php';
+
 /**
  * Contains some methods that ease up working with html
  *
