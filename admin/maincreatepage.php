@@ -1,60 +1,78 @@
+
 <?php
-error_reporting(E_ALL);
-include 'Kvz.php';
+    error_reporting(E_ALL);
+    $filename = '../tutorials/createdpage.php';
+    $file = fopen($filename , 'w');
+    $lesson_name = $_POST['lesson_name'];
+    $num_of_content = count($_POST);
+    echo $num_of_content;
+    $Document = '<!DOCTYPE html>
+<html>
+  <head>
+    <title>Physics Easily</title>
+    <meta charset="utf-8"> 
+    <link rel = "stylesheet" type = "text/css" href = "../css/flatly.css">
 
-// Some options:
-// - create a ToC
-// - don't automatically create links for ToC navigation
-// - echo output, don't return
-// - save all echoed output in a buffer
-// - Don't automatically Tidy the output (btw, only works with buffer on)
-$E = new KvzHTML(array(
-  'track_toc' => true,
-  'link_toc' => false,
-  'echo' => true,
-  'buffer' => true,
-  'tidy' => false,
-));
+        
+  </head>
+  <body>
+    <script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
+    <script src = "js/bootstrap.js"> </script>
 
-$E->h1('New application');
-$E->p($E->loremIpsum);
+    <div class="”container”" style = "font-family: \'Museo Slab\'">
+      <!--- Nav bar div-->
+                <div class="navbar navbar-default">
+                    <?php include \'../navbar.php\' ?>
+                </div>
+            <!-- Nav bar div ends -->
 
-$E->h2('Users');
-$E->blockquote($E->loremIpsum);
+      
+    <div class = "row">
+            <!-- Panel div -->
+      <div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
+                <?php include \'../panel.php\' ?>
+            </div>
+            <!-- Panel div ends -->
 
-$E->h3('Permissions');
-$E->p($E->loremIpsum);
+            <!-- Home page div -->
+            <div class="col-md-7" style = "margin-left: 10px; ">
+          <h4 class = "text-muted" style = "font-family: \'Museo Slab\'">Lesson : Kinematics >> 1.2 - '.$lesson_name.'</h4>
+          <hr style = "width: auto; border-bottom: 1px solid rgba(0, 0, 0, 1);">';
+        
+        foreach ( $_POST as $key => $value )
+        {
+            if ( preg_match('/topic/', $key) && !preg_match('/content/',$key ))
+            {
+                $Document .= '  <h3 class = "text-success" style = "font-family: \'Museo Slab\'">1.2 '.$value.'</h3>
+                                <h5 style = "font-size: 17px; line-height: 23px;">';
+            }
+            if (preg_match('/topic/', $key) && preg_match('/content/',$key ) ){
+                $Document .= '<p> '
+                                .$value.
+                            '</p>
+                        </h5>';
+            }
+        }
+          
+        $Document .=  '</div></div>
+            <div class = "row">
+                <!-- Made from header-->
+                 <div class="navbar navbar-inverse">
+                    <?php include \'../footer.php\' ?>
+                </div>
+            </div>
+        </div>            
+  </body>
+</html>';
+       
 
-$E->h4('General Concept');
-$E->p($E->loremIpsum);
+fwrite($file, $Document);
+echo $Document;
+header("$filename");
+die();
 
-$E->h4('Exceptions');
-$E->p($E->loremIpsum);
 
-$E->h3('Usability');
-$E->ul(); // An empty body will just open the tag: <ul>
-  $E->li('Point 1');
-  $E->li('Point 2');
-  $E->li();
-      $E->strong('Point 3');
-      $E->br(null);  // NULL will make a self closing tag: <br />
-      $E->span('Has some implications.');
-  $E->li(false);
-$E->ul(false);  // False will close the tag: </ul>
 
-// Save both chucks so further KvzHTML calls
-// wont impact them anymore
-$toc    = $E->getToc();
-$document = $E->getBuffer();
 
-// Print a heading that says TOC
-$E->h1('Table of Contents', array('__buffer' => false));
-
-// Print toc
-echo $toc;
-
-// Print original document
-echo $document;
 ?>
 
-<html>fdsfsdfsdf</html>fasdfsa
