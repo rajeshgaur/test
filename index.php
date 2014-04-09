@@ -35,7 +35,7 @@
                     </div>
     		</div>
             <!-- Intro header ends -->
-            <div class = "row">
+            <div class = "row" style = "height: 100%">
             <!-- Panel div -->
     	    <div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
                 <?php include 'panel.php' ?>

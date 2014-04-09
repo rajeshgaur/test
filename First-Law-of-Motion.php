@@ -17,7 +17,10 @@
                     <?php include 'navbar.php' ?>
                 </div>
             <!-- Nav bar div ends -->
-
+            <div class="intro-header-intermediate">        
+            </div>
+            <!--<hr style = "border-bottom: 7px solid black; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px">
+-->
       
     <div class = "row">
             <!-- Panel div -->
@@ -27,22 +30,31 @@
             <!-- Panel div ends -->
 
             <!-- Home page div -->
-        <div class="col-md-7" style = "margin-left: 10px; ">
+        <div class="col-md-7 col-sm-9" style = "margin-left: 10px; ">
           <h4 class = "text-muted" style = "font-family: 'Museo Slab'">Lesson 2: Newton's Laws of Motion >> 2.1 - First Law of Motion</h4>
           <hr style = "width: auto; border-bottom: 1px solid rgba(0, 0, 0, 1);">
+          <div class = "row" style = "margin-left: 10px;">
           <h3 class = "text-success" style = "font-family: 'Museo Slab'">2.1 First Law of Motion</h3>
-          <h5 style = "font-size: 17px; line-height: 23px;">
-            <p> <b>An object remains in the state of rest or in uniform motion along a straight line, until it is compelled to change the state by applying external force. </b>
+          </div>
+          <h5 style = "font-size: 17px; line-height: 23px; font-family: 'Museo Sans'">
+          
+          <div class = "row" style = "margin-left: 10px;">
+            <p class = "lead"> An object remains in the state of rest or in uniform motion along a straight line, 
+            until it is compelled to change the state by applying external force.
             </p>
             <p>
-            It states that an object at rest tends to stay at rest and an object in motion tends to stay in motion with the same speed and in the same direction unless acted upon by an unbalanced external force. This is due to the property of <i>inertia</i>.
+            It states that an object at rest tends to stay at rest and an object in motion tends to stay in motion with the same speed and in the same direction unless acted upon by an unbalanced external force. This is due to the property of <b><i>inertia</i></b>.
             </p>
             <p>
             Inertia is a property of matter that resists changes in motion. If an object is not moving, it will stay that way until an unbalanced external force starts to move it; if an object is in motion, it will stay in motion with the same speed and direction until an unbalanced external force changes its motion characteristics (friction could slow it down, or a force could accelerate its motion). So, Newton’s first law of motion is sometimes also called the <i>law of inertia</i>.
             </p>
+            </div>
           </h5>
+          <div class = "row" style = "margin-left: 10px;">
           <h3 class = "text-primary" style = "font-family: 'Museo Slab'">Examples of Newton’s First Law of Motion:</h3>
-          <h5 style = "font-size: 17px; line-height: 23px;">
+          </div>
+          <h5 style = "font-size: 17px; line-height: 23px; font-family: 'Museo Sans'">
+          <div class = "row" style = "margin-left: 10px;">
           <p>
           <ol>
           <li>Consider a car accelerating from a stoplight. As the car accelerates from zero motion, your body tends 
@@ -54,12 +66,17 @@
           and they vertically falls the carom board and remain at same place. </li>
           </ol>
           </p>
-          <img src = "">
-          <h6><center>When the card is flicked with the finger the coin placed over it falls in the glass.</center></h6>
+          </div>
+          <div class = "row" style = "margin-left: 10px;">
+          <center><img src = "img/img1.png"></center>
+          <h6 style = "font-family: 'Museo Sans'"><center>When the card is flicked with the finger the coin placed over it falls in the glass.</center></h6>
+          </div>
           </h5>
-          
-         
-          
+          <div class = "row" style = "margin-left: 10px;">
+            Next Section: <a href = "Second-Law-of-Motion.php"> Second Law of Motion</a>
+            <br>
+            Next Lesson: <a href = ""> Vectors </a>
+          </div>
         </div>
         </div>
             <div class = "row">

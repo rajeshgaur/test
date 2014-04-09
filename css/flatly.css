@@ -334,8 +334,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 0;
   border-top: 1px solid #E7F5F2;
 }
@@ -2378,7 +2378,12 @@ input[type="button"].btn-block {
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 
   font-family: "Museo Slab";
-  src: url('../fonts/exljbris - MuseoSlab-500.otf');
+  src: url('../fonts/2A97AF_0_0.woff');
+}
+
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('../fonts/2A976B_0_0.woff');
 }
 .glyphicon {
   position: relative;
@@ -4368,7 +4373,7 @@ a.list-group-item.active > .badge,
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #E7F5F2;
+  background-color: #f0f0f0 ;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -5965,10 +5970,10 @@ input:focus {
   margin-top: 0px;
   padding-top: 0px;
   color: #f8f8f8;
-  background: url(../img/cycle1half.png) no-repeat ;
-  background-size: 1350px 600px;
+  background: url(../img/blackboard.jpg) no-repeat ;
+  background-size: 1600px 670px;
+  height: 100px;
   text-align: center;
-
 }
 
 .intro-message {
@@ -6001,6 +6006,7 @@ input:focus {
   margin-top: 0px;
   padding:top: 0px;
   width: 340px;
+  height: 100%;
 }
 
 .panel-new-content {
@@ -6092,3 +6098,7 @@ input:focus {
   font-size: 20px;
 }
 
+.normal-text {
+  font-family: 'Museo Slab';
+  font-size: 17px;
+}

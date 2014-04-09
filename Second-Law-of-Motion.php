@@ -17,7 +17,8 @@
                     <?php include 'navbar.php' ?>
                 </div>
             <!-- Nav bar div ends -->
-
+            <div class="intro-header-intermediate">        
+            </div>
       
     <div class = "row">
             <!-- Panel div -->
@@ -27,21 +28,30 @@
             <!-- Panel div ends -->
 
             <!-- Home page div -->
-        <div class="col-md-7" style = "margin-left: 10px; ">
+        <div class="col-md-7 col-sm-9" style = "margin-left: 10px; ">
           <h4 class = "text-muted" style = "font-family: 'Museo Slab'">Lesson 2: Newton's Laws of Motion >> 2.2 - Second Law of Motion</h4>
           <hr style = "width: auto; border-bottom: 1px solid rgba(0, 0, 0, 1);">
+          <div class = "row" style = "margin-left: 10px;">
           <h3 class = "text-success" style = "font-family: 'Museo Slab'">2.2 Second Law of Motion</h3>
-          <h5 style = "font-size: 17px; line-height: 23px;">
-            <p> <b>The Second Law of Motion states that the net force on an object is equal to the time rate of change of its linear momentum p=mv. </b>
-            <img src = "">
+          </div>
+          <h5 style = "font-size: 17px; line-height: 23px; font-family: 'Museo Sans'">
+          <div class = "row" style = "margin-left: 10px;">
+          <p class = "lead">The net force on an object is equal to the time rate of change of its linear momentum p=mv.
+            <br><center><img src = "img/img20.png"></center>
             </p>
+            </div>
+            <div class = "row" style = "margin-left: 10px;">
             <p>
-            This law can also be stated as acceleration a of an object as produced by a net force F is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass m of the object: 
-            <img src = "">
+            This law can also be stated as acceleration <b><i>a</i></b> of an object as produced by a net force <b><i>F</i></b> is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass <b><i>m</i></b> of the object: 
+            <br><center><img src = "img/img21.png"></center>
             </p>
+            </div>
           </h5>
+          <div class = "row" style = "margin-left: 10px;">
           <h3 class = "text-primary" style = "font-family: 'Museo Slab'">Examples of Newton’s Second Law of Motion:</h3>
-          <h5 style = "font-size: 17px; line-height: 23px;">
+          </div>
+          <h5 style = "font-size: 17px; line-height: 23px; font-family: 'Museo Sans'">
+          <div class = "row" style = "margin-left: 10px;">
           <p>
           <ol>
           <li>A fielder pulls his hand backward; while catching a cricket ball coming with a great speed, to reduce the momentum of the ball with a little delay. According to Newton’s Second Law of Motion; rate of change of momentum is directly proportional to the force applied in the direction.
@@ -51,12 +61,16 @@
           </li>
           </ol>
           </p>
-          <img src = "">
+
+          <center><img src = "img/img2.png"></center>
           <h6><center>When the card is flicked with the finger the coin placed over it falls in the glass.</center></h6>
+          </div>
           </h5>
-          
-         
-          
+          <div class = "row" style = "margin-left: 10px;">
+            Next Section: <a href = "Third-Law-of-Motion.php"> Third Law of Motion</a>
+            <br>
+            Next Lesson: <a href = ""> Vectors</a>
+          </div>
         </div>
         </div>
             <div class = "row">

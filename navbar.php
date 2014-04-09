@@ -12,7 +12,8 @@
                 
                 <ul class="nav navbar-nav" style = "font-size: 15px">
                     <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href = "#">About</a></li>
+                    <li><a href = "About_us.php">About</a></li>
+                    <li><a href = "Contact_us.php">Contact Us</a></li>
                 </ul>
           
                 <ul class="nav navbar-nav navbar-right">

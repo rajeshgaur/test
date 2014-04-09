@@ -17,7 +17,8 @@
                     <?php include 'navbar.php' ?>
                 </div>
             <!-- Nav bar div ends -->
-
+            <div class="intro-header-intermediate">        
+            </div>
       
     <div class = "row">
             <!-- Panel div -->
@@ -27,11 +28,14 @@
             <!-- Panel div ends -->
 
             <!-- Home page div -->
-        <div class="col-md-7" style = "margin-left: 10px; ">
+        <div class="col-md-7 col-sm-9" style = "margin-left: 10px; ">
           <h4 class = "text-muted" style = "font-family: 'Museo Slab'">Lesson 1: 1-D Kinematics >> 1.2 - Distance and Dispplacement</h4>
           <hr style = "width: auto; border-bottom: 1px solid rgba(0, 0, 0, 1);">
-          <h3 class = "text-success" style = "font-family: 'Museo Slab'">1.2 Distance and Displacement</h3>
-          <h5 style = "font-size: 17px; line-height: 23px;">
+          <div class = "row" style = "margin-left: 10px; "><h3 class = "text-success" style = "font-family: 'Museo Slab'">1.2 Distance and Displacement</h3>
+          </div>
+          <h5 style = "font-size: 17px; line-height: 23px; font-family: 'Museo Sans'">
+          <div class = "row" style = "margin-left: 10px; ">
+          
             <p> The distance and displacement may seem to mean the same thing but they have quite different 
             definitions and meanings.
             <br><b>Distance</b> is a scalar quantity which refers to a total path length traversed by an object. 
@@ -39,14 +43,24 @@
             <br><b>Displacement</b> is a vector quantity which can be defined as the change in position of an object. 
             It is given by the difference between the final and initial positions of an object. Its SI unit is meter(m).
             </p>
-            <img src = "">
+          </div>
+          <div class = "row" style = "margin-left: 10px;">
+            <center><img src = "img/img10.png"></center>
+          </div>
+          <div class = "row" style = "margin-left: 10px;">
             <p>
             NOTE: This is a fact that the magnitude of  displacement is either less or equal to the 
-            length of an path between two points.
+            length of a path between two points.
             </p>
+          </div>
+          <div class = "row" style = "margin-left: 10px;">
+          </div>
+          <div class = "row" style = "margin-left: 10px;">
+            Next Section: <a href = "Speed-and-Velocity.php"> Speed and Velocity </a>
+            <br>
+            Next Lesson: <a href = "First-Law-of-Motion.php"> Newton's Laws of Motion </a>
+          </div>
           </h5>
-          
-         
           
         </div>
         </div>

@@ -17,7 +17,8 @@
                     <?php include 'navbar.php' ?>
                 </div>
             <!-- Nav bar div ends -->
-
+            <div class="intro-header-intermediate">        
+            </div>
       
     <div class = "row">
             <!-- Panel div -->
@@ -27,22 +28,30 @@
             <!-- Panel div ends -->
 
             <!-- Home page div -->
-        <div class="col-md-7" style = "margin-left: 10px; ">
+        <div class="col-md-7 col-sm-9" style = "margin-left: 10px; ">
           <h4 class = "text-muted" style = "font-family: 'Museo Slab'">Lesson 2: Newton's Laws of Motion >> 2.2 - Second Law of Motion</h4>
           <hr style = "width: auto; border-bottom: 1px solid rgba(0, 0, 0, 1);">
+          <div class = "row" style = "margin-left: 10px;">
           <h3 class = "text-success" style = "font-family: 'Museo Slab'">2.3 Third Law of Motion</h3>
-          <h5 style = "font-size: 17px; line-height: 23px;">
-            <p> <b>Whenever one body exerts a force on a second body, the second body exerts an oppositely directed force of equal magnitude on the first body. 
-            <br><center>or</center>
-            <br>For every action, there is an equal and opposite reaction.</b>
+          </div>
+          <h5 style = "font-size: 17px; line-height: 23px; font-family: 'Museo Sans'">
+          <div class = "row" style = "margin-left: 10px;">
+            <p class = "lead"> Whenever one body exerts a force on a second body, the second body exerts an oppositely directed force of equal magnitude on the first body. 
+            </p><p class = "lead"><center>or</center></p>
+            <br><p class = "lead">For every action, there is an equal and opposite reaction.
             </p>
             <p>
             The third law states that all forces exist in pairs: if one object <i>A</i> exerts a force <b>F<sub>A</sub></b> on a second object <i>B</i>, then <i>B</i> simultaneously exerts a force <b>F<sub>B</sub></b> on <i>A</i>, and the two forces are equal and opposite: <b>F<sub>A</sub></b> = -<b>F<sub>B</sub></b>. Therefore, this law is also called action-reaction law, with <b>F<sub>A</sub></b> called the "action" and <b>F<sub>B</sub></b> the "reaction". 
 
             </p>
+            </div>
           </h5>
+          <div class = "row" style = "margin-left: 10px;">
           <h3 class = "text-primary" style = "font-family: 'Museo Slab'">Examples of Newton’s Third Law of Motion:</h3>
-          <h5 style = "font-size: 17px; line-height: 23px;">
+          </div>
+          <h5 style = "font-size: 17px; line-height: 23px; font-family: 'Museo Sans'">
+          <div class = "row" style = "margin-left: 10px;">
+          
           <p>
           <ol>
           <li>Recoil of gun - When bullet is fired from a gun, the bullet also pushes the gun in opposite direction, 
@@ -50,15 +59,19 @@
           <br>When a gun is fired, it exerts a forward force on the bullet. The bullet exerts an equal and opposite 
           reaction force on the gun. This results in the recoil of the gun. Since the gun has a much greater mass than 
           the bullet, the acceleration of the gun is much less than the acceleration of the bullet.
-          <img src = "">
+          <center><img src = "img/img3.png"></center>
           </li>
           <li>Propulsion of a boat in forward direction – Sailor pushes water with oar in backward direction; 
           resulting water pushing the oar in forward direction. Consequently, the boat is pushed in forward direction. 
           Force applied by oar and water are of equal magnitude but in opposite directions.
-          <img src = "">
+          <center><img src = "img/img4.png"></center>
           </li>
-          </ol>
+          </ol></p>
+          </div>
           </h5>
+          <div class = "row" style = "margin-left: 10px;">
+            Next Lesson: <a href = ""> Vectors </a>
+          </div>
         </div>
         </div>
             <div class = "row">

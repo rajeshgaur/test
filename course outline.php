@@ -34,11 +34,13 @@
             <div class="navbar navbar-default">
                 <?php include 'navbar.php' ?>
             </div>
-
+            <div class="intro-header-intermediate">        
+            </div>
+        <div class = "row">
             <div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
               <?php include 'panel.php' ?>
             </div>
-          
+            
           
             <div class="col-md-7 col-sm-9">
               <div class="row"  style = "margin-left: 6px">
@@ -72,7 +74,7 @@
                       </div>
                       <div id="collapseGroup1" class="panel-collapse collapse">
                         <div class="panel-body">
-                          <div class="panel-group" id="accordion">
+                          <div class="panel-group">
                             
                             <div class="panel panel-default">
                               <div class="panel-heading">
@@ -349,7 +351,7 @@
                               </a></h4>
                             </div>
                             <div id="collapseSeven3" class="panel-collapse collapse">
-                              <div class="panel-body">
+                              <divzs class="panel-body">
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                               </div>
                               <div align = "right">
@@ -377,16 +379,19 @@
                     </div>
                   </div>
                 </div>
+             
+
+
               </div>
             </div>
           </div>
-
+</div>
           <!-- Made from header-->
-          <!--<div class = "row">
+          <div class = "row">
             <div class="navbar navbar-inverse">
-              
+              <? php include 'footer.php' ?>
             </div>
-          </div>-->
+          </div>
         </div>
     </body>
 </html>

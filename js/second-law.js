@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>EaselJS demo: Simple animation</title>
-	<link href="css/demo.css" rel="stylesheet" type="text/css">
-	<script src="js/createjs.js"></script>
-    <script type="application/x-javascript" src="js/jquery-1.10.2.js"><![CDATA[
-    //]]>
-    </script>
-	<script>
-		
-		var stage, circle;
+var stage, circle;
         var bitmap;
         var rect;
         var flag = 0;
@@ -48,7 +37,7 @@
             //createjs.Ticker.addEventListener("tick", tick);
 			//createjs.Ticker.on("tick", tick);
             stage.addEventListener("stagemousedown", handleMouseDown);
-            stage.addEventListener("stagemouseup", handleMouseUp);
+            //stage.addEventListener("stagemouseup", handleMouseUp);
 			createjs.Ticker.setFPS(30);
 		}
         );
@@ -78,11 +67,3 @@
         }
        
         
-	</script>
-</head>
-<body>
-	<canvas id="demoCanvas" width="700" height="200" style = "background:url('../img/city.jpg')">
-		alternate content
-	</canvas>
-</body>
-</html>

@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>EaselJS demo: Simple animation</title>
-	<link href="css/demo.css" rel="stylesheet" type="text/css">
-	<script src="js/createjs.js"></script>
-    <script type="application/x-javascript" src="js/jquery-1.10.2.js"><![CDATA[
-    //]]>
-    </script>
-	<script>
+
 		
 		var stage, circle;
         var bitmap;
         var rect;
         var flag = 0;
-		var v = 0;
-		var s = 0;
-		var t = 1;
 
 		$(function (){
             
@@ -54,14 +42,13 @@
         );
 		
 		function tick(event) {
-           // stage.addChild(bat);
+            stage.addChild(bat);
             bat.x = bat.x + 15;
-			t++;
-			//v = .5*t;
-			s =  (0.5 * 1 * t*t);
-			football.x = s;
-			if (football.x > stage.canvas.width) { s = s - stage.canvas.width; }
-           
+			football.x = football.x + 7;
+			if (football.x > stage.canvas.width) { football.x = 0; }
+            if (bat.x > 15) {
+                stage.removeChild(bat);
+            }
 			stage.update(event); // important!!
 		}
         function handleMouseDown(event) {
@@ -78,11 +65,3 @@
         }
        
         
-	</script>
-</head>
-<body>
-	<canvas id="demoCanvas" width="700" height="200" style = "background:url('../img/city.jpg')">
-		alternate content
-	</canvas>
-</body>
-</html>
