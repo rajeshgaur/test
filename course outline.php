@@ -41,7 +41,6 @@
               <?php include 'panel.php' ?>
             </div>
             
-          
             <div class="col-md-7 col-sm-9">
               <div class="row"  style = "margin-left: 6px">
                 <div class="col-lg-8 col-sm-9" style = "font-family: 'Museo Slab';">
@@ -385,11 +384,11 @@
               </div>
             </div>
           </div>
-</div>
+
           <!-- Made from header-->
           <div class = "row">
             <div class="navbar navbar-inverse">
-              <? php include 'footer.php' ?>
+              <?php include 'footer.php' ?>
             </div>
           </div>
         </div>

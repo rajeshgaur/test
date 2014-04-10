@@ -8,13 +8,14 @@
         
 	</head>
 	<body>
+
 		<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
 		<script src = "js/bootstrap.js"> </script>
 
 		<div class="”container”" style = "font-family: 'Museo Slab'">
 			<!--- Nav bar div-->
                 <div class="navbar navbar-default">
-                    <?php include 'navbar.php' ?>
+                    <?php include 'navbar1.php' ?>
                 </div>
             <!-- Nav bar div ends -->
 

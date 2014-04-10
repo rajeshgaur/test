@@ -1,3 +1,4 @@
+
 <?php echo '<!--- Nav bar -->
             
             <div class = "footer">
