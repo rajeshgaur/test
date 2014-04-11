@@ -15,7 +15,7 @@
 		<div class="”container”" style = "font-family: 'Museo Slab'">
 			<!--- Nav bar div-->
                 <div class="navbar navbar-default">
-                    <?php include 'navbar1.php' ?>
+                    <?php include 'navbar.php' ?>
                 </div>
             <!-- Nav bar div ends -->
 
@@ -30,7 +30,7 @@
                             </li>
                             <li><button type="button" class="btn btn-info" style = "font-size: 25px; padding: 8px 25px; ">Play</button>
                             </li>
-                            <li><button type="button" class="btn btn-warning" style = "font-size: 25px; padding: 8px 25px;">Test</button>
+                            <li><button type="button" class="btn btn-warning" style = "font-size: 25px; padding: 8px 25px;" onClick = "window.location = 'test.php'">Test</button>
                             </li>
                         </ul>
                     </div>

@@ -96,7 +96,7 @@ function post_answer(){
 			p.onreadystatechange = function() {
 		if(p.readyState == 4 && p.status == 200) {
 			document.getElementById("status").innerHTML = '';
-			alert("Thanks, Your answer was submitted"+ p.responseText);
+			//alert("Thanks, Your answer was submitted"+ p.responseText);
 			var url = 'quiz_newt.php?question=<?php echo $next; ?>';
 			window.location = url;
 	}

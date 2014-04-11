@@ -140,6 +140,38 @@
                                 </div>
                               </div>
                             </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapseSix1">
+                                  1.5 Free Fall
+                                </a></h4>
+                              </div>
+                              <div id="collapseSix1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  This chapter teaches you about free fall with cool images and examples.  
+                                </div>
+                                <div align = "right">
+                                  <button type="button" class="btn btn-success btn-xs" onclick="window.location='Free-fall.php';">Learn it!</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapseSeven1">
+                                  1.6 Relative Velocity
+                                </a></h4>
+                              </div>
+                              <div id="collapseSeven1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  Learn about Frame of Reference and Relative Velocity wih examples.  
+                                </div>
+                                <div align = "right">
+                                  <button type="button" class="btn btn-success btn-xs" onclick="window.location='Relative-velocity.php';">Learn it!</button>
+                                </div>
+                              </div>
+                            </div>
                            </div>
                           </div>
                         </div>
@@ -232,8 +264,11 @@
               </div>
              <div class="row"  style = "margin-left: 6px">
                 <div class="col-lg-8 col-sm-9" style = "font-family: 'Museo Slab';">
-                  <h3 class = "font-green"><u>Lesson 3:</u>Vectors - Motion and Forces in Two Dimensions</h3>
-                  <p> Vector principles and operations are introduced and combined with kinematic principles and Newton's laws to describe, explain and analyze the motion of objects in two dimensions. Applications include riverboat problems, projectiles, inclined planes, and static equilibrium. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                  <h3 class = "font-green"><u>Lesson 3:</u> Vectors in 2-D</h3>
+                  <p>As we have learnt about 1-Dimensional kinematics in chapter 1, but in real life you rarely encounter absolute 
+                  linear motion.most of the times you find motion in 2-Dimensions or in 3-Dimensions. In this chapter we will learn 
+                  about the motion of an object in 2-Dimension its representation, properties and path it follows.
+                  </p> 
                 </div>
                 <div class="col-lg-3 col-sm-6" style = "display: block; width: 200px; height: 200px">
                   <img class="img-responsive" src="img/motionin2D.png" alt="" >
@@ -256,120 +291,31 @@
                               <div class="panel-heading">
                                 <h4 class="panel-title">
                                 <a data-toggle="collapse" href="#collapseOne3">
-                                  Vectors and Direction
+                                  3.1 Vectors in 2D and its operations
                                 </a></h4>
                               </div>
                             <div id="collapseOne3" class="panel-collapse collapse">
                               <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                This chapter gives an introduction of what are vectors. It also teaches about vector
+                                addition and subtraction.   
                               </div>
                               <div align = "right">
-                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='tutorials/vectors/1-1.html';">Learn it!</button>
+                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='Vectors-intro.php';">Learn it!</button>
                               </div>
                             </div>
                           </div>
                           <div class="panel panel-default">
                             <div class="panel-heading">
                               <h4 class="panel-title"><a data-toggle="collapse" href="#collapseTwo3">
-                                  Vector Addition
+                                  3.2 Projectile Motion
                               </a></h4>
                             </div>
                             <div id="collapseTwo3" class="panel-collapse collapse">
                               <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                              </div>
+                                  This chapter teaches you about projectile motion with nice images and examples.
+                                </div>
                               <div align = "right">
-                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='tutorials/vectors/1-2.html';">Learn it!</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"><a data-toggle="collapse" href="#collapseThree3">
-                                Resultants
-                              </a></h4>
-                            </div>
-                            <div id="collapseThree3" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                              </div>
-                              <div align = "right">
-                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='tutorials/vectors/1-3.html';">Learn it!</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"><a data-toggle="collapse" href="#collapseFour3">
-                                Vector Components
-                              </a></h4>
-                            </div>
-                            <div id="collapseFour3" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                              </div>
-                              <div align = "right">
-                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='tutorials/vectors/1-4.html';">Learn it!</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"><a data-toggle="collapse" href="#collapseFive3">
-                                Vector Resolution
-                              </a></h4>
-                            </div>
-                            <div id="collapseFive3" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                              </div>
-                              <div align = "right">
-                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='tutorials/vectors/1-5.html';">Learn it!</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"><a data-toggle="collapse" href="#collapseSix3">
-                                Component Addition
-                              </a></h4>
-                            </div>
-                            <div id="collapseSix3" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                              </div>
-                              <div align = "right">
-                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='tutorials/vectors/1-6.html';">Learn it!</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"><a data-toggle="collapse" href="#collapseSeven3">
-                                Relative Velocity
-                              </a></h4>
-                            </div>
-                            <div id="collapseSeven3" class="panel-collapse collapse">
-                              <divzs class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                              </div>
-                              <div align = "right">
-                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='tutorials/vectors/1-7.html';">Learn it!</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"><a data-toggle="collapse" href="#collapseEight3">
-                                Independence of Perpendicular Components of Motion
-                              </a></h4>
-                            </div>
-                            <div id="collapseEight3" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                              </div>
-                              <div align = "right">
-                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='tutorials/vectors/1-8.html';">Learn it!</button>
+                                <button type="button" class="btn btn-success btn-xs" onclick="window.location='Projectile-Motion.php';">Learn it!</button>
                               </div>
                             </div>
                           </div>
@@ -378,12 +324,10 @@
                     </div>
                   </div>
                 </div>
-             
-
-
               </div>
             </div>
           </div>
+        </div>
 
           <!-- Made from header-->
           <div class = "row">

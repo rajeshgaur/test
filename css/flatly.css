@@ -236,6 +236,9 @@ th {
   }
   .navbar {
     display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   .table td,
   .table th {
@@ -314,6 +317,7 @@ img {
   display: block;
   width: 300px;
   height: 200px;
+  margin-top: 35px;
 }
 .img-rounded {
   border-radius: 6px;
@@ -6036,6 +6040,16 @@ input:focus {
 .font-green {
     font-family: "Museo Slab";
     color: #13987e;
+}
+
+.font-yellow {
+    font-family: "Museo Slab";
+    color: #f39c12;
+}
+
+.font-blue {
+    font-family: "Museo Slab";
+    color: #3498db;
 }
 
 .subtopic-card {

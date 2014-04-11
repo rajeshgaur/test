@@ -7,66 +7,51 @@ if(isset($_GET['msg'])){
 	$msg = addslashes($msg);
 }
 ?>
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8">
-<title>Quiz Tut</title>
-<script>
-function startQuiz(url){
-	window.location = url;
-}
-</script>
-<link rel = "stylesheet" type = "text/css" href = "css/flatly.css">
+    <meta charset="utf-8">
+    <title>Test Yourself</title>
+    <script>
+      function startQuiz(url){
+	       window.location = url;  
+      }
+    </script>
+    <link rel = "stylesheet" type = "text/css" href = "../css/flatly.css">
 </head>
 <body>
 <script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
-		<script src = "js/bootstrap.js"> </script>
+		<script src = "../js/bootstrap.js"> </script>
 
 		<div class="”container”" style = "font-family: 'Museo Slab'">
 			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
 			<!--- Nav bar -->
 			<div class="navbar navbar-default" style = "margin-bottom: 0px;">
-  			<div class="navbar-header" style = "margin-bottom: 0px;">
-    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      				<span class="icon-bar"></span>
-      				<span class="icon-bar"></span>
-              <span class="icon-bar"></span>  				
-    			</button>
-  			</div>
-  			<div class="navbar-collapse collapse navbar-responsive-collapse" >
-        <a class="navbar-brand" href="#">Physics-Easily</a>
-    			<ul class="nav navbar-nav" style = "font-size: 15px">
-      				<li class="active"><a href="#">Home</a></li>
-              <li><a href = "#">About</a></li>
-              <li><a href = "#"></a></li>
-      				  </ul>
-      				</li>
-    			</ul>
-          
-    			
-    			<ul class="nav navbar-nav navbar-right">
-                <!--<form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-4" placeholder="Search">
-                </form>-->
-      				<li><a href="login.html">LOGIN</a></li>
-      				<li><a href="signup.html">Sign Up</a></li>
-    			</ul>
-  			</div>
+  			<?php include 'navbar.php' ?>
 			</div>
 			<!--- Navbar ends-->
 			<!--- Intro header -->
-			<div class="intro-header" style = "background:url('../img/pencil.jpg');background-size: 1350px 200px; height :200px;">
-                    <div class="intro-message">
-                        
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            
-                        </ul>
-                    </div>
-    		</div>
-<?php echo $msg; ?>
-<h3>Click below when you are ready to start the quiz</h3>
-<button onClick="startQuiz('quiz.php?question=1')">Click Here To Begin</button>
-</body>
+      <div class="intro-header-intermediate">        
+      </div>
+      <div class = "row">
+            <div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
+              <?php include 'panel.php' ?>
+            </div>
+      <div class="col-md-7 col-sm-9" style = "min-height: 700px">
+        <div class="row"  style = "margin-left: 6px">
+          <center><?php echo $msg; ?></center>
+          <center>
+            <h3 class = "text-primary">Click below when you are ready to start the quiz</h3>
+            <button class = "btn btn-primary" onClick="startQuiz('quiz.php?question=1')">Click Here To Begin</button>
+          </center>
+        </div>
+      </div>
+    </div>
+    <div class = "row">
+            <div class="navbar navbar-inverse">
+              <?php include 'footer.php' ?>
+            </div>
+          </div>
+    </div>
+  </body>
 </html>

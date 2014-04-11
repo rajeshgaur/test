@@ -192,87 +192,70 @@ document.getElementById("resetBtn").innerHTML = "processing...";
 	display:none;
 }
 </style>
-<link rel = "stylesheet" type = "text/css" href = "css/flatly.css">
+<link rel = "stylesheet" type = "text/css" href = "../css/flatly.css">
 </head>
 
 <body>
 	<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
-		<script src = "js/bootstrap.js"> </script>
+		<script src = "../js/bootstrap.js"> </script>
 
 		<div class="”container”" style = "font-family: 'Museo Slab'">
 			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
 			<!--- Nav bar -->
-			<div class="navbar navbar-default" style="margin-bottom: 0px;">
-  			<div class="navbar-header">
-    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      				<span class="icon-bar"></span>
-      				<span class="icon-bar"></span>
-              <span class="icon-bar"></span>  				
-    			</button>
-  			</div>
-  			<div class="navbar-collapse collapse navbar-responsive-collapse" >
-        <a class="navbar-brand" href="#">Physics-Easily</a>
-    			<ul class="nav navbar-nav" style = "font-size: 15px">
-      				<li class="active"><a href="#">Home</a></li>
-              <li><a href = "#">About</a></li>
-              <li><a href = "#"></a></li>
-      				  </ul>
-      				</li>
-    			</ul>
-          
-    			
-    			<ul class="nav navbar-nav navbar-right">
-                <!--<form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-2" placeholder="Search">
-                </form>-->
-      				<li><a href="login.html">LOGIN</a></li>
-      				<li><a href="signup.html">Sign Up</a></li>
-    			</ul>
-  			</div>
+			<div class="navbar navbar-default">
+    			<?php include 'navbar1.php' ?>
 			</div>
 			<!--- Navbar ends-->
 			<!--- Intro header -->
-			
-   <div id = "quiz" style="width:700px;margin-left:auto;margin-right:auto;text-align:center;">
-   <p style="color:#06F;"><?php echo $msg; ?></p>
-	<h2>What type of question would you like to create?</h2>
-    <button onClick="showDiv('tf', 'mc', 'quiz')">True/False</button>&nbsp;&nbsp;<button onClick="showDiv('mc', 'tf', 'quiz')">Multiple Choice</button>&nbsp;&nbsp;
-    <span id="resetBtn"><button onclick="resetQuiz()">Reset quiz to zero</button></span>
-   </div>
-  <div class="content" id="tf">
-  	<h3>True or false</h3>
-    	<form action="addQuestions_v.php" name="addQuestion" method="post">
-    <strong>Please type your new question here</strong>
-    	<br />
-    		<textarea id="tfDesc" name="desc" style="width:400px;height:95px;"></textarea>
-    	  <br />
-    	<br />
-    	<strong>Please select whether true or false is the correct answer</strong>
-    	<br />
-            <input type="text" id="answer1" name="answer1" value="True" readonly>&nbsp;
-              <label style="cursor:pointer; color:#06F;">
-            <input type="radio" name="iscorrect" value="answer1">Correct Answer?</label>
-    	  <br />
-   		<br />
-            <input type="text" id="answer2" name="answer2" value="False" readonly>&nbsp;
-              <label style="cursor:pointer; color:#06F;">
-              <input type="radio" name="iscorrect" value="answer2">Correct Answer?
-            </label>
-    	  <br />
-    	<br />
-    	<input type="hidden" value="tf" name="type">
-    	<input type="submit" value="Add To Quiz">
-    </form>
- </div>
- <div class="content" id="mc">
-  	<h3>Multiple Choice</h3>
-    <form action="addQuestions_v.php" name="addMcQuestion" method="post">
-    <strong>Please type your new question here</strong>
+	<div class = "row">	
+	<div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
+                <?php include 'panel.php' ?>
+            </div>
+    <div class="col-md-7" style = "margin-left: 10px; ">
+   		<div id = "quiz" style="width:700px;margin-left:auto;margin-right:auto;text-align:center;">
+   			<p style="color:#06F;"><?php echo $msg; ?></p>
+			<h2>What type of question would you like to create?</h2>
+    		<span id="resetBtn"><button class = "btn btn-danger" onclick="resetQuiz()">Reset quiz to zero</button></span>
+    	</div>
+    	<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+  			<li class="active"><a href="#tf" data-toggle="tab">True/False</a></li>
+  			<li class=""><a href="#mc" data-toggle="tab">MCQs</a></li>
+		</ul>
+		<div id="myTabContent" class="tab-content" style = "margin-left: 15px">
+  			<div class="tab-pane fade active in" id="tf">
+  				
+    			<form action="addQuestions.php" name="addQuestion" method="post">
+    			Please type your new question here
+    			<br>
+    			<textarea id="tfDesc" name="desc" style="width:400px;height:95px;"></textarea>
+    	  		<br/>
+    			<br/>
+    			Please select whether true or false is the correct answer
+    			<br/>
+            	<input type="text" id="answer1" name="answer1" value="True" readonly>&nbsp;
+              	<label style="cursor:pointer; color:#06F;">
+            	<input type="radio" name="iscorrect" value="answer1">Correct Answer?</label>
+    	  		<br />
+   				<br />
+            	<input type="text" id="answer2" name="answer2" value="False" readonly>&nbsp;
+              	<label style="cursor:pointer; color:#06F;">
+              		<input type="radio" name="iscorrect" value="answer2">Correct Answer?
+            	</label>
+    	  		<br />
+    			<br />
+    			<input type="hidden" value="tf" name="type">
+    			<input class = "btn btn-warning" type="submit" value="Add To Quiz">
+    			</form>
+ 			</div>
+			<div class="tab-pane fade" id="mc">
+  	
+    <form action="addQuestions.php" name="addMcQuestion" method="post">
+    Please type your new question here
         <br />
         <textarea id="mcdesc" name="desc" style="width:400px;height:95px;"></textarea>
         <br />
       <br />
-    <strong>Please create the first answer for the question</strong>
+    Please create the first answer for the question
     	<br />
         <input type="text" id="mcanswer1" name="answer1">&nbsp;
           <label style="cursor:pointer; color:#06F;">
@@ -280,7 +263,7 @@ document.getElementById("resetBtn").innerHTML = "processing...";
         </label>
       <br />
     <br />
-    <strong>Please create the second answer for the question</strong>
+    Please create the second answer for the question
     <br />
         <input type="text" id="mcanswer2" name="answer2">&nbsp;
           <label style="cursor:pointer; color:#06F;">
@@ -288,7 +271,7 @@ document.getElementById("resetBtn").innerHTML = "processing...";
         </label>
       <br />
     <br />
-    <strong>Please create the third answer for the question</strong>
+    Please create the third answer for the question
     <br />
         <input type="text" id="mcanswer3" name="answer3">&nbsp;
           <label style="cursor:pointer; color:#06F;">
@@ -296,7 +279,7 @@ document.getElementById("resetBtn").innerHTML = "processing...";
         </label>
       <br />
     <br />
-    <strong>Please create the fourth answer for the question</strong>
+    Please create the fourth answer for the question
     <br />
         <input type="text" id="mcanswer4" name="answer4">&nbsp;
           <label style="cursor:pointer; color:#06F;">
@@ -305,8 +288,19 @@ document.getElementById("resetBtn").innerHTML = "processing...";
       <br />
     <br />
     <input type="hidden" value="mc" name="type">
-    <input type="submit" value="Add To Quiz">
+    <input class = "btn btn-warning" type="submit" value="Add To Quiz">
     </form>
+    </div> 
+		</div>
+    
+   
+  
+ 
+ </div>
+ </div>
+    <div class = "navbar navbar-inverse">
+    <?php include 'footer.php' ?>
+    </div>
  </div>
 </body>
 </html>

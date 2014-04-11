@@ -96,7 +96,7 @@ function post_answer(){
 			p.onreadystatechange = function() {
 		if(p.readyState == 4 && p.status == 200) {
 			document.getElementById("status").innerHTML = '';
-			alert("Thanks, Your answer was submitted"+ p.responseText);
+			//alert("Thanks, Your answer was submitted"+ p.responseText);
 			var url = 'quiz.php?question=<?php echo $next; ?>';
 			window.location = url;
 	}
@@ -111,56 +111,32 @@ window.oncontextmenu = function(){
 	return false;
 }
 </script>
-<link rel = "stylesheet" type = "text/css" href = "css/flatly.css">
+<link rel = "stylesheet" type = "text/css" href = "../css/flatly.css">
 
 </head>
 
 <body onLoad="getQuestion()">
 <script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
-		<script src = "js/bootstrap.js"> </script>
+		<script src = "../js/bootstrap.js"> </script>
 
 		<div class="”container”" style = "font-family: 'Museo Slab'">
 			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
 			<!--- Nav bar -->
-			<div class="navbar navbar-default" style = "margin-bottom: 0px;">
-  			<div class="navbar-header">
-    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      				<span class="icon-bar"></span>
-      				<span class="icon-bar"></span>
-              <span class="icon-bar"></span>  				
-    			</button>
-  			</div>
-  			<div class="navbar-collapse collapse navbar-responsive-collapse" >
-        <a class="navbar-brand" href="#">Physics-Easily</a>
-    			<ul class="nav navbar-nav" style = "font-size: 15px">
-      				<li class="active"><a href="#">Home</a></li>
-              <li><a href = "#">About</a></li>
-              <li><a href = "#"></a></li>
-      				  </ul>
-      				</li>
-    			</ul>
-          
-    			
-    			<ul class="nav navbar-nav navbar-right">
-                <!--<form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-4" placeholder="Search">
-                </form>-->
-      				<li><a href="login.html">LOGIN</a></li>
-      				<li><a href="signup.html">Sign Up</a></li>
-    			</ul>
-  			</div>
+			<div class="navbar navbar-default">
+    			<?php include 'navbar1.php' ?>
 			</div>
+			<div class="intro-header-intermediate">        
+            </div>
 			<!--- Navbar ends-->
 			<!--- Intro header -->
-			<div class="intro-header" style = "background:url('../img/pencil.jpg');background-size: 1350px 200px; height :200px;">
-                    <div class="intro-message">
-                        
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            
-                        </ul>
-                    </div>
-    		</div>
+	<div class = "row">	
+	<div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
+                
+            </div>
+    <div class="col-md-7" style = "margin-left: 10px; ">
+		</div>
+		</div>
+		</div>	
 <div id="status">
 <div id="counter_status"></div>
 <div id="question"></div>
