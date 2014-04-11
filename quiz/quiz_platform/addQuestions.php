@@ -192,7 +192,8 @@ function showDiv(el1,el2,el3){
     			<input class = "btn btn-warning" type="submit" value="Add To Quiz">
     			</form>
     			<div class = "row" align = "right">
-    			<button class = "btn btn-info" onclick = "window.location = ''">Done</button>
+    			<?php $msg="your quiz has been created" ?>
+    			<button class = "btn btn-info" onclick = "window.location = 'addQuiz.php?msg='your quiz has been created''">Done</button>
  			</div></div>
 			<div class="tab-pane fade" id="mc">
   	
@@ -238,7 +239,7 @@ function showDiv(el1,el2,el3){
     <input class = "btn btn-warning" type="submit" value="Add To Quiz">
    	</form>
    	<div class = "row" align = "right">
-    			<button class = "btn btn-info" onclick = "window.location = ''">Done</button>
+    			<button class = "btn btn-info" onclick = "window.location = 'addQuiz.php?msg='your quiz has been created''">Done</button>
  			</div></div> 
 		</div>
     

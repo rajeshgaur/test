@@ -89,6 +89,12 @@ if(isset($_GET['msg'])){
                             <div class = "col-md-8">Complete quiz</div>
                              <div class = "col-md-4" align = "right"><button type="button" class="btn btn-success btn-xs" onClick="startQuiz('quiz/quiz.php?question=1')">Go for MCQs!</button>
                                   </div>
+                            </div>
+                            <br>
+                            <div class = "row">
+                            <div class = "col-md-8">Custom Test</div>
+                             <div class = "col-md-4" align = "right"><button type="button" class="btn btn-success btn-xs" onClick="startQuiz('quiz/enter_test.php')">Enter test</button>
+                                  </div>
                             </div> 
                            </div>
                           </div>

@@ -12,9 +12,10 @@ require_once("scripts/connect_db.php");
 $quizname=$_POST['desc']; //Name of the new quiz
 $quizname = strip_tags($quizname);
 $quizname = mysql_real_escape_string($quizname);
-$sql = mysql_query("INSERT INTO quiz (name) VALUES ('$quizname')")or die(mysql_error());
+$token = uniqid();
+$sql = mysql_query("INSERT INTO quiz (name,token) VALUES ('$quizname','$token')")or die(mysql_error());
 $lastId = mysql_insert_id();
-header('location: addQuestions.php?msg='.$lastId.'?&startID=1');
+header('location: token.php?msg='.$lastId.'?&startID=1'.'?&token='.$token);
 exit();
 }
 ?>
@@ -64,7 +65,7 @@ function showDiv(el1,el2,el3){
             </div>
     <div class="col-md-7" style = "margin-left: 10px; margin-bottom: 20px">
    		<div id="quiz" style="width:700px;margin-left:auto;margin-right:auto;text-align:center;">
-			<p style="color:#06F;"><?php echo $msg; ?></p>
+			<p style="color:#06F;"><?php echo $msg ?></p>
 			<h2> QUIZ </h2>
 			<form action="addQuiz.php" name="addQuiz" method="post">
 			<h4>Please type your quiz name here</h4>
