@@ -21,11 +21,12 @@ if(isset($_GET['question'])){
 		exit();
 	}
 	if($arrCount >= $numQuestions){
-		echo 'finished|<p>There are no more questions. Please enter your first and last name and click next</p>
+		echo 'finished|
+		<p>There are no more questions. Please enter your first and last name and click next</p>
 				<form action="userAnswers_v.php" method="post">
 				<input type="hidden" name="complete" value="true">
 				<input type="text" name="username">
-				<input type="submit" value="Finish">
+				<input class = "btn btn-primary" type="submit" value="Finish">
 				</form>';
 		exit();
 	}
@@ -45,7 +46,7 @@ if(isset($_GET['question'])){
 				';
 				
 			}
-			$output = ''.$q.','.$answers.',<span id="btnSpan"><button onclick="post_answer()">Submit</button></span>';
+			$output = ''.$question_id.'. '.$q.','.$answers.',<div class = "row" align = "center"><span id="btnSpan"><button class = "btn btn-primary" onclick="post_answer()">Submit</button></span></div>';
 			echo $output;
 		   }
 		}

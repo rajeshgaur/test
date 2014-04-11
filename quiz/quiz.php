@@ -36,7 +36,7 @@ if(isset($_GET['question'])){
 <script type="text/javascript">
 function countDown(secs,elem) {
 	var element = document.getElementById(elem);
-	element.innerHTML = "You have "+secs+" seconds remaining.";
+	element.innerHTML = "<center>You have "+secs+" seconds remaining.</center>";
 	if(secs < 1) {
 		var xhr = new XMLHttpRequest();
 		var url = "userAnswers.php";
@@ -115,33 +115,27 @@ window.oncontextmenu = function(){
 
 </head>
 
-<body onLoad="getQuestion()">
-<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
+	<body onLoad="getQuestion()">
+		<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> 
+		</script>
 		<script src = "../js/bootstrap.js"> </script>
 
-		<div class="”container”" style = "font-family: 'Museo Slab'">
-			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
-			<!--- Nav bar -->
-			<div class="navbar navbar-default">
-    			<?php include 'navbar1.php' ?>
+		<div class="”container”" style = "font-family: 'Museo Slab'; height: 710px; background: url(../img/pen-paper.jpg);">
+		
+		<div class = "col-md-offset-2 col-md-8">	
+			<div class = "jumbotron" id="status" style = "min-height: 400px; margin-top: 100px; border: 1px solid #000000;">
+				<h5 class = "text-warning"><div id="counter_status"></div></h5>
+				<h3>
+					<div id="question"></div>
+				</h3>
+				<h4>
+					<div id="answers" style = "margin-top: 20px; margin-left: 15px;"></div>
+				</h4>
 			</div>
-			<div class="intro-header-intermediate">        
-            </div>
-			<!--- Navbar ends-->
-			<!--- Intro header -->
-	<div class = "row">	
-	<div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
-                
-            </div>
-    <div class="col-md-7" style = "margin-left: 10px; ">
 		</div>
 		</div>
-		</div>	
-<div id="status">
-<div id="counter_status"></div>
-<div id="question"></div>
-<div id="answers"></div>
-</div>
-<script type="text/javascript">countDown(20,"counter_status");</script>
-</body>
+		<script type="text/javascript">
+			countDown(20,"counter_status");
+		</script>
+	</body>
 </html>

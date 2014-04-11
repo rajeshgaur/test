@@ -20,6 +20,21 @@ if(isset($_POST['qid']) && $_POST['qid'] != ""){
 	$_SESSION['lastQuestion'] = $qid;
 }
 ?>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quiz Tut</title>
+<link rel = "stylesheet" type = "text/css" href = "../css/flatly.css">
+</head>
+<body>
+	<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
+	<script src = "../js/bootstrap.js"> </script>
+		<div class="”container”" style = "font-family: 'Museo Slab'; height: 710px; background: url(../img/pen-paper.jpg);">
+		
+		<div class = "col-md-offset-2 col-md-8">	
+			<div class = "jumbotron" id="status" style = "min-height: 400px; margin-top: 100px; border: 1px solid #000000;">
+				<center><h3>
 <?php
 $quiz_id = "";
 if(isset($_GET['quiz_id']))
@@ -73,3 +88,10 @@ $response = "";
 	}
 }
 ?>
+
+	</h3>
+
+</div>				
+</div>
+</body>
+</html>

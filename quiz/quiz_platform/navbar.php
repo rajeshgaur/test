@@ -1,4 +1,6 @@
-<?php echo '<!--- Nav bar -->
+
+<?php 
+  echo '<!--- Nav bar -->
             
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -8,11 +10,12 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse" >
-            <a class="navbar-brand" href="index.php">Physics-Easily</a>
+            <a class="navbar-brand" href="../../index.php">Physics-Easily</a>
                 
                 <ul class="nav navbar-nav" style = "font-size: 15px">
-                    <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href = "#">About</a></li>
+                    <li class="active"><a href="../../index.php">Home</a></li>
+                    <li><a href = "../../About_us.php">About</a></li>
+                    <li><a href = "../../Contact_us.php">Contact Us</a></li>
                 </ul>
           
                 <ul class="nav navbar-nav navbar-right">

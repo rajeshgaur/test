@@ -33,12 +33,12 @@ if(isset($_GET['msg'])){
 			<!--- Intro header -->
       <div class="intro-header-intermediate">        
       </div>
-      <div class = "row">
+      <div class = "row"  style = "min-height: 400px">
             <div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
               <?php include 'panel.php' ?>
             </div>
-      <div class="col-md-7 col-sm-9" style = "min-height: 700px">
-        <div class="row"  style = "margin-left: 6px">
+      <div class="col-md-7 col-sm-9">
+        <div class="row"  style = "margin-left: 6px; margin-top: 120px">
           <center><?php echo $msg; ?></center>
           <center>
             <h3 class = "text-primary">Click below when you are ready to start the quiz</h3>

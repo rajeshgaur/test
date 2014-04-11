@@ -7,7 +7,7 @@ if(isset($_GET['question'])){
 	$prev = $question - 1;
 	if(!isset($_SESSION['qid_array']) && $question != 1){
 		$msg = "Sorry! No cheating.";
-		header("location: index_kin.php?msg=$msg");
+		header("location: index_newt.php?msg=$msg"); 
 		exit();
 	}
 	if(isset($_SESSION['qid_array']) && in_array($question, $_SESSION['qid_array'])){
@@ -15,7 +15,7 @@ if(isset($_GET['question'])){
 		unset($_SESSION['answer_array']);
 		unset($_SESSION['qid_array']);
 		session_destroy();
-		header("location: index_kin.php?msg=$msg");
+		header("location: index_newt.php?msg=$msg");
 		exit();
 	}
 	if(isset($_SESSION['lastQuestion']) && $_SESSION['lastQuestion'] != $prev){
@@ -23,7 +23,7 @@ if(isset($_GET['question'])){
 		unset($_SESSION['answer_array']);
 		unset($_SESSION['qid_array']);
 		session_destroy();
-		header("location: index_kin.php?msg=$msg");
+		header("location: index_newt.php?msg=$msg");
 		exit();
 	}
 }
@@ -36,7 +36,7 @@ if(isset($_GET['question'])){
 <script type="text/javascript">
 function countDown(secs,elem) {
 	var element = document.getElementById(elem);
-	element.innerHTML = "You have "+secs+" seconds remaining.";
+	element.innerHTML = "<center>You have "+secs+" seconds remaining.</center>";
 	if(secs < 1) {
 		var xhr = new XMLHttpRequest();
 		var url = "userAnswers_newt.php";
@@ -119,53 +119,20 @@ window.oncontextmenu = function(){
 <script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
 		<script src = "js/bootstrap.js"> </script>
 
-		<div class="”container”" style = "font-family: 'Museo Slab'">
-			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
-			<!--- Nav bar -->
-			<div class="navbar navbar-default" style = "margin-bottom: 0px;">
-  			<div class="navbar-header">
-    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      				<span class="icon-bar"></span>
-      				<span class="icon-bar"></span>
-              <span class="icon-bar"></span>  				
-    			</button>
-  			</div>
-  			<div class="navbar-collapse collapse navbar-responsive-collapse" >
-        <a class="navbar-brand" href="#">Physics-Easily</a>
-    			<ul class="nav navbar-nav" style = "font-size: 15px">
-      				<li class="active"><a href="#">Home</a></li>
-              <li><a href = "#">About</a></li>
-              <li><a href = "#"></a></li>
-      				  </ul>
-      				</li>
-    			</ul>
-          
-    			
-    			<ul class="nav navbar-nav navbar-right">
-                <!--<form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-4" placeholder="Search">
-                </form>-->
-      				<li><a href="login.html">LOGIN</a></li>
-      				<li><a href="signup.html">Sign Up</a></li>
-    			</ul>
-  			</div>
+		<div class="”container”" style = "font-family: 'Museo Slab'; height: 710px; background: url(../img/pen-paper.jpg);">
+		
+		<div class = "col-md-offset-2 col-md-8">	
+			<div class = "jumbotron" id="status" style = "min-height: 400px; margin-top: 100px; border: 1px solid #000000;">
+				<h5 class = "text-warning"><div id="counter_status"></div></h5>
+				<h3>
+					<div id="question"></div>
+				</h3>
+				<h4>
+					<div id="answers" style = "margin-top: 20px; margin-left: 15px;"></div>
+				</h4>
 			</div>
-			<!--- Navbar ends-->
-			<!--- Intro header -->
-			<div class="intro-header" style = "background:url('../img/pencil.jpg');background-size: 1350px 200px; height :200px;">
-                    <div class="intro-message">
-                        
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            
-                        </ul>
-                    </div>
-    		</div>
-<div id="status">
-<div id="counter_status"></div>
-<div id="question"></div>
-<div id="answers"></div>
-</div>
+		</div>
+		</div>
 <script type="text/javascript">countDown(20,"counter_status");</script>
 </body>
 </html>

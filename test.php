@@ -106,7 +106,7 @@ if(isset($_GET['msg'])){
                   <br>What's more? You can visulaise the
                   numericals you create using our <a href = "" style = "color: #3498db"><b>Play tool!</b></a>
                   
-                  <div align = "right"> <button type="button" class="btn btn-warning">Make your own Test!</button></div>
+                  <div align = "right"> <button type="button" class="btn btn-warning" onclick = "window.location = 'quiz/quiz_platform/addQuiz.php'">Make your own Test!</button></div>
                 </p>
                 </div>
                   <div class="col-lg-3 col-sm-6" style = "display: block;">

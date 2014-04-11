@@ -204,7 +204,7 @@ document.getElementById("resetBtn").innerHTML = "processing...";
 			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
 			<!--- Nav bar -->
 			<div class="navbar navbar-default">
-    			<?php include 'navbar1.php' ?>
+    			<?php include 'navbar.php' ?>
 			</div>
 			<!--- Navbar ends-->
 			<!--- Intro header -->

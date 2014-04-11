@@ -43,54 +43,45 @@ function showDiv(el1,el2,el3){
 	display:none;
 }
 </style>
-<link rel = "stylesheet" type = "text/css" href = "css/flatly.css">
+<link rel = "stylesheet" type = "text/css" href = "../../css/flatly.css">
 </head>
+
 <body>
-<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
-		<script src = "js/bootstrap.js"> </script>
+	<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
+		<script src = "../../js/bootstrap.js"> </script>
 
 		<div class="”container”" style = "font-family: 'Museo Slab'">
 			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
 			<!--- Nav bar -->
-			<div class="navbar navbar-default" style="margin-bottom: 0px;">
-  			<div class="navbar-header">
-    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      				<span class="icon-bar"></span>
-      				<span class="icon-bar"></span>
-              <span class="icon-bar"></span>  				
-    			</button>
-  			</div>
-  			<div class="navbar-collapse collapse navbar-responsive-collapse" >
-        <a class="navbar-brand" href="#">Physics-Easily</a>
-    			<ul class="nav navbar-nav" style = "font-size: 15px">
-      				<li class="active"><a href="#">Home</a></li>
-              <li><a href = "#">About</a></li>
-              <li><a href = "#"></a></li>
-      				  </ul>
-      				</li>
-    			</ul>
-          
-    			
-    			<ul class="nav navbar-nav navbar-right">
-                <!--<form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-2" placeholder="Search">
-                </form>-->
-      				<li><a href="login.html">LOGIN</a></li>
-      				<li><a href="signup.html">Sign Up</a></li>
-    			</ul>
-  			</div>
+			<div class="navbar navbar-default">
+    			<?php include 'navbar.php' ?>
 			</div>
 			<!--- Navbar ends-->
 			<!--- Intro header -->
-			<div id="quiz" style="width:700px;margin-left:auto;margin-right:auto;text-align:center;">
+	<div class = "row">	
+	<div class="col-md-3 col-sm-2" style = "background-color: #f0f0f0" align = "center">
+                <?php include 'panel.php' ?>
+            </div>
+    <div class="col-md-7" style = "margin-left: 10px; margin-bottom: 20px">
+   		<div id="quiz" style="width:700px;margin-left:auto;margin-right:auto;text-align:center;">
 			<p style="color:#06F;"><?php echo $msg; ?></p>
 			<h2> QUIZ </h2>
 			<form action="addQuiz.php" name="addQuiz" method="post">
-			<strong>Please type your quiz name here</strong>
+			<h4>Please type your quiz name here</h4>
     	<br />
-    		<textarea id="tfDesc" name="desc" style="width:400px;height:95px;"></textarea>
+    		<textarea id="tfDesc" name="desc" style="width:400px;height:95px; resize:none"></textarea>
     	  <br />
-		  <input type="submit" value="Add To Quiz">
+		  <input class = "btn btn-warning" type="submit" value="Start making quiz">
 			</form>
 			</div>
-</body>			
+ </div>
+ </div>
+    <div class = "navbar navbar-inverse">
+    <?php include 'footer.php' ?>
+    </div>
+ </div>
+</body>
+</html>
+
+			
+				
