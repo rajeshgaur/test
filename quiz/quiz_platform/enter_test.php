@@ -1,36 +1,33 @@
-<?php 
-$msg = "";
-if(isset($_GET['msg'])){
-	$msg = $_GET['msg'];
-}
-?>
 <?php
-if(isset($_POST['desc']))
-{
+	if(isset($_POST[tfDesc])) {
+		$token = $_POST['tfDesc'];
+	}
+	else {
+		$msg = "Enter a token.";
+		header('location: enter_test.php?msg='.$msg);
+	}
+	require_once("scripts/connect_db");
+	$token = strip_tags($token);
+	$token = mysql_real_escape_string();
+	$result = mysql_query("SELECT quiz_id from quiz where token=$token");
+	$row = mysql_fetch_array($result);
 
-require_once("scripts/connect_db.php");
-$quizname=$_POST['desc']; //Name of the new quiz
-$quizname = strip_tags($quizname);
-$quizname = mysql_real_escape_string($quizname);
-$token = uniqid();
-$sql = mysql_query("INSERT INTO quiz (name,token) VALUES ('$quizname','$token')")or die(mysql_error());
-$lastId = mysql_insert_id();
-header('location: token.php?msg='.$lastId.'&startID=1'.'&token='.$token);
-exit();
-}
+	$qid = $row['quiz_id'];
+	
+?>
+
+<?php
+	$msg = "";
+	if(isset($_GET['msg'])) {
+		$msg = $_GET['msg'];
+	}
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Create A Quiz</title>
-<script>
-function showDiv(el1,el2,el3){
-	document.getElementById(el1).style.display = 'block';
-	document.getElementById(el2).style.display = 'none';
-	document.getElementById(el3).style.display = 'none';
-}
-</script>
+
 <style type="text/css">
 .content{
 	margin-top:48px;
@@ -51,8 +48,8 @@ function showDiv(el1,el2,el3){
 	<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
 		<script src = "../../js/bootstrap.js"> </script>
 
-		<div class="”container”" style = "font-family: 'Museo Slab'">
-			<!---<h1><a href="”#”">Physics-Easily</a></h1>-->
+		<div class="â€containerâ€" style = "font-family: 'Museo Slab'">
+			<!---<h1><a href="â€#â€">Physics-Easily</a></h1>-->
 			<!--- Nav bar -->
 			<div class="navbar navbar-default">
     			<?php include 'navbar.php' ?>
@@ -65,14 +62,14 @@ function showDiv(el1,el2,el3){
             </div>
     <div class="col-md-7" style = "margin-left: 10px; margin-bottom: 20px">
    		<div id="quiz" style="width:700px;margin-left:auto;margin-right:auto;text-align:center;">
-			<p style="color:#06F;"><?php echo $msg ?></p>
-			<h2> QUIZ </h2>
-			<form action="addQuiz.php" name="addQuiz" method="post">
-			<h4>Please type your quiz name here</h4>
+			<h2> CUSTOM QUIZ </h2>
+			<form action="enter_test.php" name="addQuiz" method="post">
+			<h4>Please enter the token for the quiz you want to take:</h4>
     	<br />
-    		<textarea id="tfDesc" name="desc" style="width:400px;height:95px; resize:none"></textarea>
-    	  <br />
-		  <input class = "btn btn-warning" type="submit" value="Start making quiz">
+
+    		<input type="text" class="form-control" id="tfDesc" placeholder="Token">
+    		<br />
+		  <input class = "btn btn-warning" type="submit" value="Take the quiz">
 			</form>
 			</div>
  </div>

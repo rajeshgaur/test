@@ -39,7 +39,7 @@
 			<h2> QUIZ </h2>
 			
 			<h4>Your token number is: <?php echo $token ?></h4>
-			<button class = "btn btn-warning" onclick = "window.location = 'addQuestions.php?msg=<?php echo $lastID ?>?&startID=1'">Add questions</button>
+			<button class = "btn btn-warning" onclick = "window.location = 'addQuestions.php?msg=<?php echo $lastID ?>&startID=1'">Add questions</button>
     		<br />
 		  	</form>
 			</div>

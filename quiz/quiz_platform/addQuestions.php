@@ -5,6 +5,7 @@ $status="";
 $startID=""; 
 if(isset($_GET['msg'])){
 	$quiz = $_GET['msg'];
+
 	}
 	//echo $quiz;
 if(isset($_GET['status'])){
@@ -14,11 +15,11 @@ if(isset($_GET['status'])){
 <?php
 if(isset($_POST['desc'])){
 	if(!isset($_POST['iscorrect']) || $_POST['iscorrect'] == ""){
-		echo "Sorry, important data to submit your question is missing. Please press back in your browser and try again and make sure you select a correct answer for the question.";
+		$msg = "Sorry, important data to submit your question is missing. Please press back in your browser and try again and make sure you select a correct answer for the question.";
 		exit();
 	}
 	if(!isset($_POST['type']) || $_POST['type'] == ""){
-		echo "Sorry, there was an error parsing the form. Please press back in your browser and try again";
+		$msg = "Sorry, there was an error parsing the form. Please press back in your browser and try again";
 		exit();
 	}
 	require_once("scripts/connect_db.php");
@@ -42,13 +43,13 @@ if(isset($_POST['desc'])){
 	$question = mysql_real_escape_string($question);
 	if($type == 'tf'){
 	if((!$question) || (!$answer1) || (!$answer2) || (!$isCorrect)){
-		echo "Sorry, All fields must be filled in to add a new question to the quiz. Please press back in your browser and try again.";
+		$msg = "Sorry, All fields must be filled in to add a new question to the quiz. Please press back in your browser and try again.";
 		exit();
 		}
 	}
 	if($type == 'mc'){
 	if((!$question) || (!$answer1) || (!$answer2) || (!$answer3) || (!$answer4) || (!$isCorrect)){
-		echo "Sorry, All fields must be filled in to add a new question to the quiz. Please press back in your browser and try again.";
+		$msg = "Sorry, All fields must be filled in to add a new question to the quiz. Please press back in your browser and try again.";
 		exit();
 		}
 	}
@@ -159,7 +160,7 @@ function showDiv(el1,el2,el3){
             </div>
     <div class="col-md-7" style = "margin-left: 10px; margin-bottom: 10px">
    		<div id = "quiz" style="width:700px;margin-left:auto;margin-right:auto;text-align:center;">
-   			<p style="color:#06F;"><?php echo $msg; ?></p>
+   			<p class = 'text-info'><?php echo $status; ?></p>
 			<h2>What type of question would you like to create?</h2>
     		</div>
     	<ul class="nav nav-tabs" style="margin-bottom: 15px;">
@@ -192,8 +193,7 @@ function showDiv(el1,el2,el3){
     			<input class = "btn btn-warning" type="submit" value="Add To Quiz">
     			</form>
     			<div class = "row" align = "right">
-    			<?php $msg="your quiz has been created" ?>
-    			<button class = "btn btn-info" onclick = "window.location = 'addQuiz.php?msg='your quiz has been created''">Done</button>
+    			<button class = "btn btn-info" onclick = "window.location = 'addQuiz.php?msg=\'Thank you. Your quiz has been created.\''">Done</button>
  			</div></div>
 			<div class="tab-pane fade" id="mc">
   	
@@ -239,13 +239,9 @@ function showDiv(el1,el2,el3){
     <input class = "btn btn-warning" type="submit" value="Add To Quiz">
    	</form>
    	<div class = "row" align = "right">
-    			<button class = "btn btn-info" onclick = "window.location = 'addQuiz.php?msg='your quiz has been created''">Done</button>
+    			<button class = "btn btn-info" onclick = "window.location = 'addQuiz.php'">Done</button>
  			</div></div> 
 		</div>
-    
-   
-  
- 
  </div>
  </div>
     <div class = "navbar navbar-inverse">
