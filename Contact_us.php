@@ -34,12 +34,12 @@
   <table class="table">
   <tr>
   <td>
-    <div class="media">
-      <a class="pull-left" href="https://plus.google.com/u/0/111679284030248571646/posts">
-      <img class="media-object" src="img/Raju.jpg" alt="..." width="70" height="70">
+     <div class="media">
+      <a class="pull-left" href="https://plus.google.com/u/0/113474690361874469572/posts">
+      <img class="media-object" src="img/HV.jpg" alt="..." width="70" height="70">
       </a>
       <div class="media-body">
-       <h4 class="media-heading"><p><h5>Rajesh Gaur<br>Email- raj21gaur@gmail.com<br>Phone- 9638965725</h5></p></h4>
+       <h4 class="media-heading"><p><h5>Hardik Virani<br>Email- 112viranihardik@gmail.com<br>Phone- 8866201782</h5></p></h4>
     </div>
    </div>
    </td>
@@ -54,7 +54,8 @@
     </div>
    </div>
    </td>
-   <td>
+   </tr>
+   <tr><td>
     <div class="media">
       <a class="pull-left" href="https://plus.google.com/u/0/117553272552842719376/posts">
       <img class="media-object" src="img/Yesha.jpg" alt="..." width="70" height="70">
@@ -64,13 +65,6 @@
     </div>
    </div>
    </td>
-</tr>
-</table>
-</div>
-<br>
-<div class="table-responsive">
-  <table class="table">
-  <tr>
   <td>
     <div class="media">
       <a class="pull-left" href="https://plus.google.com/u/0/116263248039049500448/posts">
@@ -81,7 +75,8 @@
     </div>
    </div>
    </td>
-
+   </tr>
+<tr>
     <td>
     <div class="media">
       <a class="pull-left" href="https://plus.google.com/u/0/101252462200556747155/posts">
@@ -103,11 +98,6 @@
    </div>
    </td>
 </tr>
-</table>
-</div>
-<br>
-<div class="table-responsive">
-  <table class="table">
   <tr>
   <td>
     <div class="media">
@@ -130,18 +120,21 @@
     </div>
    </div>
    </td>
+   </tr>
+   <tr>
    <td>
     <div class="media">
-      <a class="pull-left" href="https://plus.google.com/u/0/113474690361874469572/posts">
-      <img class="media-object" src="img/Hardik.jpg" alt="..." width="70" height="70">
+      <a class="pull-left" href="https://plus.google.com/u/0/111679284030248571646/posts">
+      <img class="media-object" src="img/Raju.jpg" alt="..." width="70" height="70">
       </a>
       <div class="media-body">
-       <h4 class="media-heading"><p><h5>Hardik Virani<br>Email- 201101066@daiict.ac.in<br>Phone- 8866201782</h5></p></h4>
+       <h4 class="media-heading"><p><h5>Rajesh Gaur<br>Email- raj21gaur@gmail.com<br>Phone- 9638965725</h5></p></h4>
     </div>
    </div>
    </td>
 </tr>
 </table>
+
 </div>
 </div>
 </div>

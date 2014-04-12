@@ -21,16 +21,15 @@
     
       
         <div class="row"  style = "margin-left: 6px">
-          <div class="col-lg-8 col-sm-9" style = "font-family: 'Museo Slab';">
+          <div class="col-md-11" style = "font-family: 'Museo Slab';">
 			
       <div class= "jumbotron">
   <h2>About Us</h2>
   <hr>
   <h3>About Physics Easily</h3>
-  <p>The Physics Easily is an online, free-to-use physics website developed primarily for beginning physics students and their teachers. The website features a variety of sections intended to support both teachers and students in the tasks of learning and teaching physics<br>The Physics Easily Learn is among the most popular sections of the website. The Learn covers basic physics topics using informative graphics and an easy-to-understand language. Each unit is divided into lessons and sub-lessons. A lesson resembles the type and extent of coverage typically given to that topic in class. The sub-lessons are accompanied by Check Your Understanding sections, providing an opportunity to assess one's understanding of the lesson material. The Tutorial, when combined with other sections at this site, provides a student of physics a great opportunity to learn and to test their physics understanding.</p>
+  <p>Physics Easily is an online Physics learning platform where students, teachers and other physics enthusiasts can come and learn about various topics of physics and can create some simulations for better understanding of their concepts. This website features some exiciting and interactive platforms in which users can LEARN the concepts, simulate practical situations with the unique PLAY feature and TEST themselves with an interactive quizzing platform.
   <h3>About the Developers</h3>
-  <p>The Physics Easily was written and developed by Berojgar People. These people have been teaching physics and chemistry at DA-IICT. they are graduate of the University of Farjiwada where they received degrees in Chemical Engineering and Chemistry. they have been working tirelessly on the development of the website since 1857. When not teaching and not working on The Physics Easily, These people spent their boring life in sleeping and bakar.</p>
-
+  <p>Physics Easily is developed by a group of nine students of DA-IICT 2011 batch pursuing B. Tech in ICT (Information and Communication Technology).</p>
 </div>
 </div>
 </div>

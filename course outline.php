@@ -324,10 +324,23 @@
                     </div>
                   </div>
                 </div>
+                </div>
+              </div>
+              <div class="row"  style = "margin-left: 6px; margin-bottom: 40px">
+                <div class="col-lg-8 col-sm-9" style = "font-family: 'Museo Slab'; margin-top: 30px">
+                  <h3 class = "font-green">References</h3>
+                  NCERT Textbooks
+                  <br>wikipedia website
+                  <br>http://physics.info/  
+                  <br>
+                </div>
+                  <div class="col-lg-3 col-sm-6" style = "display: block;">
+                    <img class="img-responsive" src="img/books1.jpg" alt="">
+                  </div>
               </div>
             </div>
           </div>
-        </div>
+
 
           <!-- Made from header-->
           <div class = "row">

@@ -28,7 +28,7 @@
                         <ul class="list-inline intro-social-buttons">
                             <li><button type="button" class="btn btn-success" style = "font-size: 25px; padding: 8px 20px;" onclick="window.location='course outline.php';">Learn</button>
                             </li>
-                            <li><button type="button" class="btn btn-info" style = "font-size: 25px; padding: 8px 25px; ">Play</button>
+                            <li><button type="button" class="btn btn-info" style = "font-size: 25px; padding: 8px 25px; " onclick="window.location='Rect.php';">Play</button>
                             </li>
                             <li><button type="button" class="btn btn-warning" style = "font-size: 25px; padding: 8px 25px;" onClick = "window.location = 'test.php'">Test</button>
                             </li>
