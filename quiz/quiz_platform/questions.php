@@ -29,7 +29,7 @@ if(isset($_GET['question'])){
 		exit();
 	}
 	if($arrCount >= $numQuestions){
-		echo 'finished|
+		echo '<br>Finished|
 		<p>There are no more questions. Please enter your first and last name and click next</p>
 				<form action="userAnswers.php?quiz_id='.$quiz_id.'" method="post">
 				<input type="hidden" name="complete" value="true">

@@ -42,15 +42,15 @@
                     <center><h2 class="modal-title" id="myModalLabel">Login</h2></center>
                   </div>
                   <div class="modal-body">
-                    <form class="form col-md-12 center-block">
+                    <form class="form col-md-12 center-block" action = "login.php" method = "post">
                       <div class="form-group">
-                        <input type="text" class="form-control input-lg" placeholder="Email">
+                        <input type="text" name = "login_email_id"class="form-control input-lg" placeholder="Email">
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control input-lg" placeholder="Password">
+                        <input type="password" name = "login_passwd"class="form-control input-lg" placeholder="Password">
                       </div>
                       <div class="form-group">
-                        <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+                        <button type = "submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
                         <span class="pull-right"><a href="#" style = "color: #2c3e50">Forgot Password?</a></span>
                         <span class = "pull-left"><a href="#" style = "color: #2c3e50">Login with Gmail Account</a></span>
                       </div>

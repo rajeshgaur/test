@@ -18,6 +18,12 @@ if(isset($_POST['qid']) && $_POST['qid'] != ""){
 		array_push($_SESSION['qid_array'], $qid);
 	}
 	$_SESSION['lastQuestion'] = $qid;
+	/*if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']>30))
+	{
+		session_unset();
+		session_destroy();
+	}
+	$_SESSION['LAST_ACTIVITY']=time();*/
 }
 ?>
 <!doctype html>
@@ -30,7 +36,7 @@ if(isset($_POST['qid']) && $_POST['qid'] != ""){
 <body>
 	<script src = "http://code.jquery.com/jquery-1.10.1.min.js"> </script>
 	<script src = "../js/bootstrap.js"> </script>
-		<div class="”container”" style = "font-family: 'Museo Slab'; height: 710px; background: url(../img/pen-paper.jpg);">
+		<div class="”container”" style = "font-family: 'Museo Slab'; height: 710px; background: url(../../img/pen-paper.jpg);">
 		
 		<div class = "col-md-offset-2 col-md-8">	
 			<div class = "jumbotron" id="status" style = "min-height: 400px; margin-top: 100px; border: 1px solid #000000;">

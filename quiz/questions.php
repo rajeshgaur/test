@@ -17,11 +17,11 @@ if(isset($_GET['question'])){
 	}
 	if($arrCount > $numQuestions){
 		unset($_SESSION['answer_array']);
-		header("location: index.php");
+		header("location: ../test.php");
 		exit();
 	}
 	if($arrCount >= $numQuestions){
-		echo 'finished|
+		echo '<br>Finished|
 		<p>There are no more questions. Please enter your first and last name and click next</p>
 				<form action="userAnswers.php" method="post">
 				<input type="hidden" name="complete" value="true">

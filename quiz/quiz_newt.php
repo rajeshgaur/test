@@ -7,7 +7,7 @@ if(isset($_GET['question'])){
 	$prev = $question - 1;
 	if(!isset($_SESSION['qid_array']) && $question != 1){
 		$msg = "Sorry! No cheating.";
-		header("location: index_newt.php?msg=$msg"); 
+		header("location: ../test.php"); 
 		exit();
 	}
 	if(isset($_SESSION['qid_array']) && in_array($question, $_SESSION['qid_array'])){
@@ -15,7 +15,7 @@ if(isset($_GET['question'])){
 		unset($_SESSION['answer_array']);
 		unset($_SESSION['qid_array']);
 		session_destroy();
-		header("location: index_newt.php?msg=$msg");
+		header("location: ../test.php");
 		exit();
 	}
 	if(isset($_SESSION['lastQuestion']) && $_SESSION['lastQuestion'] != $prev){
@@ -23,7 +23,7 @@ if(isset($_GET['question'])){
 		unset($_SESSION['answer_array']);
 		unset($_SESSION['qid_array']);
 		session_destroy();
-		header("location: index_newt.php?msg=$msg");
+		header("location: ../test.php");
 		exit();
 	}
 }
