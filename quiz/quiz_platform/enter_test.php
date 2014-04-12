@@ -1,18 +1,25 @@
 <?php
-	if(isset($_POST[tfDesc])) {
-		$token = $_POST['tfDesc'];
-	}
-	else {
-		$msg = "Enter a token.";
-		header('location: enter_test.php?msg='.$msg);
-	}
-	require_once("scripts/connect_db");
-	$token = strip_tags($token);
-	$token = mysql_real_escape_string();
-	$result = mysql_query("SELECT quiz_id from quiz where token=$token");
-	$row = mysql_fetch_array($result);
 
-	$qid = $row['quiz_id'];
+$token = "";
+	if(isset($_POST['desc'])) {
+		$token = $_POST['desc'];
+	}
+	
+	require_once("scripts/connect_db.php");
+	$token = strip_tags($token);
+	$token = mysql_real_escape_string($token);
+	$result = mysql_query("SELECT quiz_id FROM quiz WHERE token = '$token'");
+	while($row = mysql_fetch_array($result)) {
+		$qid = $row['quiz_id'];
+
+		$que = mysql_query("SELECT question_id FROM questions WHERE quiz_id = $qid LIMIT 1");
+		while($row = mysql_fetch_array($que)) {
+			$question_id = $row['question_id'];
+			//echo "ssadasd".$question_id;
+			header('location: quiz.php?question='.$question_id.'&quiz_id='.$qid);
+
+		}
+	}
 	
 ?>
 
@@ -67,7 +74,7 @@
 			<h4>Please enter the token for the quiz you want to take:</h4>
     	<br />
 
-    		<input type="text" class="form-control" id="tfDesc" placeholder="Token">
+    		<input type="text" class="form-control" id="tfDesc" name = "desc" placeholder="Token">
     		<br />
 		  <input class = "btn btn-warning" type="submit" value="Take the quiz">
 			</form>

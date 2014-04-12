@@ -1,25 +1,28 @@
 <?php 
-$quiz = "";
+$quiz ="";
 $msg="";
 $status="";
 $startID=""; 
+
 if(isset($_GET['msg'])){
 	$quiz = $_GET['msg'];
+}
 
-	}
-	//echo $quiz;
 if(isset($_GET['status'])){
-	$status = $_GET['status'];}
-	?>
+	$status = $_GET['status'];
+}
+?>
 
 <?php
 if(isset($_POST['desc'])){
+	$quiz = $_GET['msg'];
+	
 	if(!isset($_POST['iscorrect']) || $_POST['iscorrect'] == ""){
-		$msg = "Sorry, important data to submit your question is missing. Please press back in your browser and try again and make sure you select a correct answer for the question.";
+		echo "Sorry, important data to submit your question is missing. Please press back in your browser and try again and make sure you select a correct answer for the question.";
 		exit();
 	}
 	if(!isset($_POST['type']) || $_POST['type'] == ""){
-		$msg = "Sorry, there was an error parsing the form. Please press back in your browser and try again";
+		echo "Sorry, there was an error parsing the form. Please press back in your browser and try again";
 		exit();
 	}
 	require_once("scripts/connect_db.php");
@@ -43,16 +46,18 @@ if(isset($_POST['desc'])){
 	$question = mysql_real_escape_string($question);
 	if($type == 'tf'){
 	if((!$question) || (!$answer1) || (!$answer2) || (!$isCorrect)){
-		$msg = "Sorry, All fields must be filled in to add a new question to the quiz. Please press back in your browser and try again.";
+		echo "Sorry, All fields must be filled in to add a new question to the quiz. Please press back in your browser and try again.";
 		exit();
 		}
 	}
 	if($type == 'mc'){
 	if((!$question) || (!$answer1) || (!$answer2) || (!$answer3) || (!$answer4) || (!$isCorrect)){
-		$msg = "Sorry, All fields must be filled in to add a new question to the quiz. Please press back in your browser and try again.";
+		echo "Sorry, All fields must be filled in to add a new question to the quiz. Please press back in your browser and try again.";
 		exit();
 		}
 	}
+	//echo $quiz;
+	//exit();
 	$sql = mysql_query("INSERT INTO questions (question, type,quiz_id) VALUES ('$question', '$type', '$quiz')")or die(mysql_error());
 		$lastId = mysql_insert_id();
 		mysql_query("UPDATE questions SET question_id='$lastId' WHERE id='$lastId' LIMIT 1")or die(mysql_error());
@@ -62,6 +67,7 @@ if(isset($_POST['desc'])){
 		$sql2 = mysql_query("INSERT INTO answers (question_id, answer, correct,quiz_id) VALUES ('$lastId', '$answer1', '1','$quiz')")or die(mysql_error());
 		mysql_query("INSERT INTO answers (question_id, answer, correct,quiz_id) VALUES ('$lastId', '$answer2', '0','$quiz')")or die(mysql_error());
 		$status = 'Thanks, your question has been added';
+		$quiz = $_GET['msg'];
 		header('location: addQuestions.php?msg='.$quiz.'&status='.$status.'');
 	exit();
 	}
@@ -170,7 +176,7 @@ function showDiv(el1,el2,el3){
 		<div id="myTabContent" class="tab-content" style = "margin-left: 15px">
   			<div class="tab-pane fade active in" id="tf">
   				
-    			<form action="addQuestions.php" name="addQuestion" method="post">
+    			<form action="addQuestions.php?msg=<?php echo $quiz;?>" name="addQuestion" method="post">
     			Please type your new question here
     			<br>
     			<textarea id="tfDesc" name="desc" style="width:400px;height:95px;"></textarea>
@@ -197,7 +203,7 @@ function showDiv(el1,el2,el3){
  			</div></div>
 			<div class="tab-pane fade" id="mc">
   	
-    <form action="addQuestions.php" name="addMcQuestion" method="post">
+    <form action="addQuestions.php?msg=<?php echo $quiz;?>" name="addMcQuestion" method="post">
     Please type your new question here
         <br />
         <textarea id="mcdesc" name="desc" style="width:400px;height:95px;"></textarea>

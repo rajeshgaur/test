@@ -21,6 +21,8 @@ PHP, MySQL, Javascript Timed Quiz
     This is free software, and you are welcome to redistribute it
     under certain conditions found in the GNU GPL license
 */
+    //error_reporting(E_ALL);
+   // ini_set('display_errors','1');
 $db_host = "localhost";
 // Place the username for the MySQL database here
 $db_username = "root"; 

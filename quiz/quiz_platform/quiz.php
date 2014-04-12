@@ -1,6 +1,10 @@
 <?php
 
 session_start();
+if(!isset($_SESSION['countdown_time'])){
+	$_SESSION['countdown_time'] = 20;
+	//"fdas";
+}
 if(isset($_GET['question'])){
 	$question = preg_replace('/[^0-9]/', "", $_GET['question']);
 	$next = $question + 1;
@@ -11,12 +15,15 @@ if(isset($_GET['quiz_id'])){
 $quiz_id=preg_replace('/[^0-9]/', "", $_GET['quiz_id']);
 //echo $quiz_id;
 }
+
 ?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Quiz Page</title>
+<script src = "../../js/jquery.countdown.js"></script>
+
 <script type="text/javascript">
 function countDown(secs,elem) {
 	var element = document.getElementById(elem);
@@ -40,6 +47,7 @@ xhr.send(vars);
 		
 	}
 	secs--;
+	<?php $_SESSION['countdown_time'] = $_SESSION['countdown_time'];?>
 	var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
 }
 </script>
@@ -149,6 +157,6 @@ window.oncontextmenu = function(){
 <div id="question"></div>
 <div id="answers"></div>
 </div>
-<script type="text/javascript">countDown(20,"counter_status");</script>
-</body>
+<script type="text/javascript">countDown(<?php echo $_SESSION['countdown_time'];?>,"counter_status");</script>
+</body >
 </html>

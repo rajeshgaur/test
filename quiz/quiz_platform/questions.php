@@ -8,25 +8,30 @@ if(isset($_GET['question'])){
 	$output = "";
 	$answers = "";
 	$q = "";
+
 	if(isset($_GET['quiz_id'])){
 	$quiz_id = $_GET['quiz_id'];
 	}
+
+	
+
 	$sql = mysql_query("SELECT question_id FROM questions WHERE quiz_id = $quiz_id");
 	$numQuestions = mysql_num_rows($sql);
 	if(!isset($_SESSION['answer_array']) || $_SESSION['answer_array'] < 1){
 		$currQuestion = "1";
 	}else{
 		$arrCount = count($_SESSION['answer_array']);
+		
 	}
 	if($arrCount > $numQuestions){
 		unset($_SESSION['answer_array']);
-		header("location: index.php");
+		header("location: ../../test.php");
 		exit();
 	}
 	if($arrCount >= $numQuestions){
 		echo 'finished|
 		<p>There are no more questions. Please enter your first and last name and click next</p>
-				<form action="userAnswers.php" method="post">
+				<form action="userAnswers.php?quiz_id='.$quiz_id.'" method="post">
 				<input type="hidden" name="complete" value="true">
 				<input type="text" name="username">
 				<input class = "btn btn-primary" type="submit" value="Finish">

@@ -1,28 +1,31 @@
-<?php 
-$quiz ="";
-$msg="";
-$status="";
-$startID=""; 
-
-if(isset($_GET['msg'])){
-	$quiz = $_GET['msg'];
-}
-
-if(isset($_GET['status'])){
-	$status = $_GET['status'];
-}
-?>
 
 
 <?php
+$quiz = "";
+$msg = "";
+$status = "";
+$startID = "";
+if(isset($_GET['msg'])) {
+	$quiz = $_GET['msg'];
+}
+
+if(isset($_GET['status'])) {
+	$statusID = $_GET['status'];
+}
+
 if(isset($_POST['desc'])){
 	if(!isset($_POST['iscorrect']) || $_POST['iscorrect'] == ""){
-		echo "Sorry, important data to submit your question is missing. Please press back in your browser and try again and make sure you select a correct answer for the question.";
-		exit();
+		//echo "Sorry, important data to submit your question is missing. Please press back in your browser and try again and make sure you select a correct answer for the question.";
+		//exit();
+		//alert("Sorry, important data to submit your question is missing. Please press back in your browser and try again and make sure you select a correct answer for the question.");
+		$message = "wrong answer";
+		echo "<script type='text/javascript'>alert('$message');</script>";	
 	}
 	if(!isset($_POST['type']) || $_POST['type'] == ""){
-		echo "Sorry, there was an error parsing the form. Please press back in your browser and try again";
-		exit();
+		//echo "Sorry, there was an error parsing the form. Please press back in your browser and try again";
+		//exit();
+		$message = "wrong answer";
+		echo "<script type='text/javascript'>alert('$message');</script>";	
 	}
 	require_once("scripts/connect_db.php");
 	$question = $_POST['desc'];
@@ -298,6 +301,7 @@ document.getElementById("resetBtn").innerHTML = "processing...";
     <input type="hidden" value="mc" name="type">
     <input type="submit" value="Add To Quiz">
     </form>
+	
  </div>
 </body>
 </html>
